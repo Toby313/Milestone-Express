@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=3 uid="uid://dl3xov5wp10wb"]
+
+[ext_resource type="Texture2D" uid="uid://dvvgauqy034s5" path="res://SkyLayer.png" id="1_qavdm"]
+[ext_resource type="Texture2D" uid="uid://768iiiooiulk" path="res://BackergroundLayer.png" id="2_wxr6t"]
+[ext_resource type="Texture2D" uid="uid://cuqe86xxwrcyi" path="res://BackgroundLayer.png" id="3_qimvk"]
+[ext_resource type="Script" path="res://Cameramovement.cs" id="3_x3l7a"]
+[ext_resource type="Texture2D" uid="uid://dwbw2wocrmvhe" path="res://MiddleLayer.png" id="4_fyrmm"]
+[ext_resource type="Texture2D" uid="uid://cb6a0v3ohihx3" path="res://ForegroundLayer.png" id="5_3ic3x"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Sky" type="Sprite2D" parent="Parallax2D"]
+texture = ExtResource("1_qavdm")
+centered = false
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Backerground" type="Sprite2D" parent="Parallax2D2"]
+texture = ExtResource("2_wxr6t")
+centered = false
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Background" type="Sprite2D" parent="Parallax2D3"]
+texture = ExtResource("3_qimvk")
+centered = false
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Middle" type="Sprite2D" parent="Parallax2D4"]
+texture = ExtResource("4_fyrmm")
+centered = false
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.7, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Foreground" type="Sprite2D" parent="Parallax2D5"]
+texture = ExtResource("5_3ic3x")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 70)
+zoom = Vector2(4.5, 4.5)
+script = ExtResource("3_x3l7a")
+speed = 100
