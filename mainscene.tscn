@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dl3xov5wp10wb"]
+[gd_scene load_steps=21 format=3 uid="uid://dl3xov5wp10wb"]
 
 [ext_resource type="Texture2D" uid="uid://dvvgauqy034s5" path="res://SkyLayer.png" id="1_qavdm"]
 [ext_resource type="Texture2D" uid="uid://768iiiooiulk" path="res://BackergroundLayer.png" id="2_wxr6t"]
@@ -6,6 +6,104 @@
 [ext_resource type="Script" path="res://Cameramovement.cs" id="3_x3l7a"]
 [ext_resource type="Texture2D" uid="uid://dwbw2wocrmvhe" path="res://MiddleLayer.png" id="4_fyrmm"]
 [ext_resource type="Texture2D" uid="uid://cb6a0v3ohihx3" path="res://ForegroundLayer.png" id="5_3ic3x"]
+[ext_resource type="Texture2D" uid="uid://byfled1uprxdq" path="res://ArrivaAnimation-Sheet.png" id="6_unctp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwxfv"]
+atlas = ExtResource("6_unctp")
+region = Rect2(0, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmgid"]
+atlas = ExtResource("6_unctp")
+region = Rect2(272, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnoee"]
+atlas = ExtResource("6_unctp")
+region = Rect2(544, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4vk7"]
+atlas = ExtResource("6_unctp")
+region = Rect2(816, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7empx"]
+atlas = ExtResource("6_unctp")
+region = Rect2(1088, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyqpp"]
+atlas = ExtResource("6_unctp")
+region = Rect2(1360, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp1eo"]
+atlas = ExtResource("6_unctp")
+region = Rect2(1632, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up8jo"]
+atlas = ExtResource("6_unctp")
+region = Rect2(1904, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50p31"]
+atlas = ExtResource("6_unctp")
+region = Rect2(2176, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmsba"]
+atlas = ExtResource("6_unctp")
+region = Rect2(2448, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t48t5"]
+atlas = ExtResource("6_unctp")
+region = Rect2(2720, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roa4p"]
+atlas = ExtResource("6_unctp")
+region = Rect2(2992, 0, 272, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grfht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwxfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmgid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnoee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4vk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7empx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyqpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp1eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up8jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50p31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmsba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t48t5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roa4p")
+}],
+"loop": true,
+"name": &"TrainDriving",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,7 +126,7 @@ texture = ExtResource("2_wxr6t")
 centered = false
 
 [node name="Parallax2D3" type="Parallax2D" parent="."]
-scroll_scale = Vector2(0.6, 1)
+scroll_scale = Vector2(0.7, 1)
 repeat_size = Vector2(306, 0)
 repeat_times = 100
 
@@ -37,24 +135,30 @@ texture = ExtResource("3_qimvk")
 centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="."]
-repeat_size = Vector2(306, 0)
+repeat_size = Vector2(303, 0)
 repeat_times = 100
 
 [node name="Middle" type="Sprite2D" parent="Parallax2D4"]
 texture = ExtResource("4_fyrmm")
 centered = false
 
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 68.5)
+zoom = Vector2(4, 4)
+script = ExtResource("3_x3l7a")
+speed = 120
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Camera2D"]
+position = Vector2(0, 88)
+sprite_frames = SubResource("SpriteFrames_grfht")
+animation = &"TrainDriving"
+autoplay = "TrainDriving"
+
 [node name="Parallax2D5" type="Parallax2D" parent="."]
-scroll_scale = Vector2(1.7, 1)
+scroll_scale = Vector2(1.3, 1)
 repeat_size = Vector2(306, 0)
 repeat_times = 100
 
 [node name="Foreground" type="Sprite2D" parent="Parallax2D5"]
 texture = ExtResource("5_3ic3x")
 centered = false
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, 70)
-zoom = Vector2(4.5, 4.5)
-script = ExtResource("3_x3l7a")
-speed = 100

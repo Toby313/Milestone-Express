@@ -15,10 +15,16 @@ run/main_scene="res://mainscene.tscn"
 config/features=PackedStringArray("4.3", "C#", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1224
+window/size/viewport_height=548
+
 [dotnet]
 
 project/assembly_name="Milestone Express"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
