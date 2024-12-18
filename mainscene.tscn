@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_08gkf"]
 [ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackergroundLayer.png" id="2_0ee11"]
 [ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer.png" id="3_8ujj5"]
-[ext_resource type="Script" path="res://Cameramovement.cs" id="3_x3l7a"]
-[ext_resource type="Texture2D" uid="uid://4kky2803q6f8" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_p3yig"]
+[ext_resource type="Script" path="res://Scripts/Cameramovement.cs" id="3_x3l7a"]
+[ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_p3yig"]
 [ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="5_ayh2t"]
-[ext_resource type="Texture2D" path="res://ArrivaAnimation-Sheet.png" id="6_unctp"]
+[ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://ArrivaAnimation-Sheet.png" id="6_unctp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nwxfv"]
 atlas = ExtResource("6_unctp")
