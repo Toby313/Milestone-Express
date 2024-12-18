@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb6a0v3ohihx3"
-path="res://.godot/imported/ForegroundLayer.png-1b5fffab1e0625cef4a52ce536697d81.ctex"
+uid="uid://bgntjj0key2db"
+path="res://.godot/imported/ForegroundLayer.png-68aefdcc20b90f3bc276c88281f80af5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ForegroundLayer.png"
-dest_files=["res://.godot/imported/ForegroundLayer.png-1b5fffab1e0625cef4a52ce536697d81.ctex"]
+source_file="res://Sprites/Background Layers/ForegroundLayer.png"
+dest_files=["res://.godot/imported/ForegroundLayer.png-68aefdcc20b90f3bc276c88281f80af5.ctex"]
 
 [params]
 

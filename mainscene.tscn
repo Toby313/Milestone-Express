@@ -1,12 +1,12 @@
 [gd_scene load_steps=21 format=3 uid="uid://dl3xov5wp10wb"]
 
-[ext_resource type="Texture2D" uid="uid://dvvgauqy034s5" path="res://SkyLayer.png" id="1_qavdm"]
-[ext_resource type="Texture2D" uid="uid://768iiiooiulk" path="res://BackergroundLayer.png" id="2_wxr6t"]
-[ext_resource type="Texture2D" uid="uid://cuqe86xxwrcyi" path="res://BackgroundLayer.png" id="3_qimvk"]
+[ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_08gkf"]
+[ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackergroundLayer.png" id="2_0ee11"]
+[ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer.png" id="3_8ujj5"]
 [ext_resource type="Script" path="res://Cameramovement.cs" id="3_x3l7a"]
-[ext_resource type="Texture2D" uid="uid://dwbw2wocrmvhe" path="res://MiddleLayer.png" id="4_fyrmm"]
-[ext_resource type="Texture2D" uid="uid://cb6a0v3ohihx3" path="res://ForegroundLayer.png" id="5_3ic3x"]
-[ext_resource type="Texture2D" uid="uid://byfled1uprxdq" path="res://ArrivaAnimation-Sheet.png" id="6_unctp"]
+[ext_resource type="Texture2D" uid="uid://4kky2803q6f8" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_p3yig"]
+[ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="5_ayh2t"]
+[ext_resource type="Texture2D" path="res://ArrivaAnimation-Sheet.png" id="6_unctp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nwxfv"]
 atlas = ExtResource("6_unctp")
@@ -116,7 +116,7 @@ repeat_size = Vector2(306, 0)
 repeat_times = 100
 
 [node name="Sky" type="Sprite2D" parent="Node/Parallax2D"]
-texture = ExtResource("1_qavdm")
+texture = ExtResource("1_08gkf")
 centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="Node"]
@@ -125,7 +125,7 @@ repeat_size = Vector2(306, 0)
 repeat_times = 100
 
 [node name="Backerground" type="Sprite2D" parent="Node/Parallax2D2"]
-texture = ExtResource("2_wxr6t")
+texture = ExtResource("2_0ee11")
 centered = false
 
 [node name="Parallax2D3" type="Parallax2D" parent="Node"]
@@ -134,7 +134,7 @@ repeat_size = Vector2(306, 0)
 repeat_times = 100
 
 [node name="Background" type="Sprite2D" parent="Node/Parallax2D3"]
-texture = ExtResource("3_qimvk")
+texture = ExtResource("3_8ujj5")
 centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="Node"]
@@ -142,7 +142,7 @@ repeat_size = Vector2(303, 0)
 repeat_times = 100
 
 [node name="Middle" type="Sprite2D" parent="Node/Parallax2D4"]
-texture = ExtResource("4_fyrmm")
+texture = ExtResource("4_p3yig")
 centered = false
 
 [node name="Parallax2D5" type="Parallax2D" parent="Node"]
@@ -152,7 +152,7 @@ repeat_times = 100
 
 [node name="Foreground" type="Sprite2D" parent="Node/Parallax2D5"]
 z_index = 1
-texture = ExtResource("5_3ic3x")
+texture = ExtResource("5_ayh2t")
 centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
