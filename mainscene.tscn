@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://dl3xov5wp10wb"]
+[gd_scene load_steps=22 format=3 uid="uid://dl3xov5wp10wb"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_08gkf"]
 [ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackergroundLayer.png" id="2_0ee11"]
 [ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer.png" id="3_8ujj5"]
 [ext_resource type="Script" path="res://Scripts/Cameramovement.cs" id="3_x3l7a"]
 [ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_p3yig"]
+[ext_resource type="Texture2D" uid="uid://q7548djipyia" path="res://Sprites/Background Layers/FenceLayer.png" id="4_pkfyb"]
 [ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="5_ayh2t"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://ArrivaAnimation-Sheet.png" id="6_unctp"]
 
@@ -111,7 +112,8 @@ animations = [{
 position = Vector2(14953, 0)
 
 [node name="Parallax2D" type="Parallax2D" parent="Node"]
-scroll_scale = Vector2(0.2, 1)
+scroll_scale = Vector2(0, 1)
+scroll_offset = Vector2(-100, 0)
 repeat_size = Vector2(306, 0)
 repeat_times = 100
 
@@ -120,17 +122,17 @@ texture = ExtResource("1_08gkf")
 centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="Node"]
-scroll_scale = Vector2(0.4, 1)
-repeat_size = Vector2(306, 0)
-repeat_times = 100
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(292, 0)
+repeat_times = 104
 
 [node name="Backerground" type="Sprite2D" parent="Node/Parallax2D2"]
 texture = ExtResource("2_0ee11")
 centered = false
 
 [node name="Parallax2D3" type="Parallax2D" parent="Node"]
-scroll_scale = Vector2(0.7, 1)
-repeat_size = Vector2(306, 0)
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(304, 0)
 repeat_times = 100
 
 [node name="Background" type="Sprite2D" parent="Node/Parallax2D3"]
@@ -138,10 +140,19 @@ texture = ExtResource("3_8ujj5")
 centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.7, 1)
 repeat_size = Vector2(303, 0)
 repeat_times = 100
 
-[node name="Middle" type="Sprite2D" parent="Node/Parallax2D4"]
+[node name="Fence" type="Sprite2D" parent="Node/Parallax2D4"]
+texture = ExtResource("4_pkfyb")
+centered = false
+
+[node name="Parallax2D6" type="Parallax2D" parent="Node"]
+repeat_size = Vector2(303, 0)
+repeat_times = 100
+
+[node name="Middle" type="Sprite2D" parent="Node/Parallax2D6"]
 texture = ExtResource("4_p3yig")
 centered = false
 
@@ -151,6 +162,7 @@ repeat_size = Vector2(306, 0)
 repeat_times = 100
 
 [node name="Foreground" type="Sprite2D" parent="Node/Parallax2D5"]
+visible = false
 z_index = 1
 texture = ExtResource("5_ayh2t")
 centered = false
