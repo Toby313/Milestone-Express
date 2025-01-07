@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://dl3xov5wp10wb"]
+[gd_scene load_steps=23 format=3 uid="uid://dl3xov5wp10wb"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_08gkf"]
-[ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackergroundLayer.png" id="2_0ee11"]
-[ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer.png" id="3_8ujj5"]
+[ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_0ee11"]
+[ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer1.png" id="3_8ujj5"]
+[ext_resource type="Texture2D" uid="uid://bsb8b58y2n1wh" path="res://Sprites/Background Layers/BackgroundLayer2.png" id="3_oslpj"]
 [ext_resource type="Script" path="res://Scripts/Cameramovement.cs" id="3_x3l7a"]
 [ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_p3yig"]
 [ext_resource type="Texture2D" uid="uid://q7548djipyia" path="res://Sprites/Background Layers/FenceLayer.png" id="4_pkfyb"]
@@ -123,19 +124,29 @@ centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(0.2, 1)
-repeat_size = Vector2(292, 0)
-repeat_times = 104
+repeat_size = Vector2(584, 0)
+repeat_times = 52
 
-[node name="Backerground" type="Sprite2D" parent="Node/Parallax2D2"]
+[node name="Background3" type="Sprite2D" parent="Node/Parallax2D2"]
 texture = ExtResource("2_0ee11")
 centered = false
 
-[node name="Parallax2D3" type="Parallax2D" parent="Node"]
+[node name="Parallax2D7" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(0.4, 1)
-repeat_size = Vector2(304, 0)
-repeat_times = 100
+scroll_offset = Vector2(-50, 0)
+repeat_size = Vector2(608, 0)
+repeat_times = 50
 
-[node name="Background" type="Sprite2D" parent="Node/Parallax2D3"]
+[node name="Background2" type="Sprite2D" parent="Node/Parallax2D7"]
+texture = ExtResource("3_oslpj")
+centered = false
+
+[node name="Parallax2D3" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.55, 1)
+repeat_size = Vector2(608, 0)
+repeat_times = 50
+
+[node name="Background1" type="Sprite2D" parent="Node/Parallax2D3"]
 texture = ExtResource("3_8ujj5")
 centered = false
 
