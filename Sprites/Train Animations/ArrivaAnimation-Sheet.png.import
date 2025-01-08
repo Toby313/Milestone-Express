@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ci31so50rxvhh"
-path="res://.godot/imported/ArrivaAnimation-Sheet.png-371fad7439e5a6c3b3fbecb01d3767ea.ctex"
+path="res://.godot/imported/ArrivaAnimation-Sheet.png-c42533d28cb068d47028b7a0373a04bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArrivaAnimation-Sheet.png"
-dest_files=["res://.godot/imported/ArrivaAnimation-Sheet.png-371fad7439e5a6c3b3fbecb01d3767ea.ctex"]
+source_file="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png"
+dest_files=["res://.godot/imported/ArrivaAnimation-Sheet.png-c42533d28cb068d47028b7a0373a04bd.ctex"]
 
 [params]
 
