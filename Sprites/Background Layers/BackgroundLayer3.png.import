@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byke381laua6r"
-path="res://.godot/imported/SkyLayer.png-56f07d12e009c0df4bb474e22852d27b.ctex"
+uid="uid://d4ii5o6e0cr8i"
+path="res://.godot/imported/BackgroundLayer3.png-4b1b598fd9bcf3a83b06e7bca570fa45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Raw Sprites/SkyLayer.png"
-dest_files=["res://.godot/imported/SkyLayer.png-56f07d12e009c0df4bb474e22852d27b.ctex"]
+source_file="res://Sprites/Background Layers/BackgroundLayer3.png"
+dest_files=["res://.godot/imported/BackgroundLayer3.png-4b1b598fd9bcf3a83b06e7bca570fa45.ctex"]
 
 [params]
 

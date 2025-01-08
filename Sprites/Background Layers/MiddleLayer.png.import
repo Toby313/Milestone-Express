@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byfled1uprxdq"
-path="res://.godot/imported/ArrivaAnimation-Sheet.png-371fad7439e5a6c3b3fbecb01d3767ea.ctex"
+uid="uid://batwqhucw7lqb"
+path="res://.godot/imported/MiddleLayer.png-a861157a2b624fc31802fb3cfff90337.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ArrivaAnimation-Sheet.png"
-dest_files=["res://.godot/imported/ArrivaAnimation-Sheet.png-371fad7439e5a6c3b3fbecb01d3767ea.ctex"]
+source_file="res://Sprites/Background Layers/MiddleLayer.png"
+dest_files=["res://.godot/imported/MiddleLayer.png-a861157a2b624fc31802fb3cfff90337.ctex"]
 
 [params]
 

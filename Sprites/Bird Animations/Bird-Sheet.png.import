@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://768iiiooiulk"
-path="res://.godot/imported/BackergroundLayer.png-9e992c7e78277e12ce755c0d3f0b9f6d.ctex"
+uid="uid://bgwxnqfl6fqbl"
+path="res://.godot/imported/Bird-Sheet.png-4c3be78b9b5d5113cf4ada72279dd066.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BackergroundLayer.png"
-dest_files=["res://.godot/imported/BackergroundLayer.png-9e992c7e78277e12ce755c0d3f0b9f6d.ctex"]
+source_file="res://Sprites/Bird Animations/Bird-Sheet.png"
+dest_files=["res://.godot/imported/Bird-Sheet.png-4c3be78b9b5d5113cf4ada72279dd066.ctex"]
 
 [params]
 
