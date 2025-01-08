@@ -1,0 +1,170 @@
+[gd_scene load_steps=22 format=3 uid="uid://lluk8emraqwo"]
+
+[ext_resource type="Texture2D" uid="uid://dvvgauqy034s5" path="res://SkyLayer.png" id="1_wyqb4"]
+[ext_resource type="Texture2D" uid="uid://768iiiooiulk" path="res://BackergroundLayer.png" id="2_03t8t"]
+[ext_resource type="Texture2D" uid="uid://cuqe86xxwrcyi" path="res://BackgroundLayer.png" id="3_q34qj"]
+[ext_resource type="Texture2D" uid="uid://dwbw2wocrmvhe" path="res://MiddleLayer.png" id="4_lmird"]
+[ext_resource type="Texture2D" uid="uid://cb6a0v3ohihx3" path="res://ForegroundLayer.png" id="5_goh2a"]
+[ext_resource type="Texture2D" uid="uid://byfled1uprxdq" path="res://ArrivaAnimation-Sheet.png" id="6_5cpqv"]
+[ext_resource type="Script" path="res://MoveStation.cs" id="6_oiodx"]
+[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="8_y0kao"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwxfv"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(0, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmgid"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(272, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnoee"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(544, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4vk7"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(816, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7empx"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(1088, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyqpp"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(1360, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp1eo"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(1632, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up8jo"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(1904, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50p31"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(2176, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmsba"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(2448, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t48t5"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(2720, 0, 272, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_roa4p"]
+atlas = ExtResource("6_5cpqv")
+region = Rect2(2992, 0, 272, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_guplb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwxfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xmgid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnoee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4vk7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7empx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyqpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp1eo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up8jo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50p31")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmsba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t48t5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_roa4p")
+}],
+"loop": true,
+"name": &"TrainDriving",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node" type="Node2D" parent="."]
+position = Vector2(14953, 0)
+
+[node name="Parallax2D" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Sky" type="Sprite2D" parent="Node/Parallax2D"]
+texture = ExtResource("1_wyqb4")
+centered = false
+
+[node name="Parallax2D2" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.4, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Backerground" type="Sprite2D" parent="Node/Parallax2D2"]
+texture = ExtResource("2_03t8t")
+centered = false
+
+[node name="Parallax2D3" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.7, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Background" type="Sprite2D" parent="Node/Parallax2D3"]
+texture = ExtResource("3_q34qj")
+centered = false
+
+[node name="Parallax2D4" type="Parallax2D" parent="Node"]
+repeat_size = Vector2(303, 0)
+repeat_times = 100
+
+[node name="Middle" type="Sprite2D" parent="Node/Parallax2D4"]
+texture = ExtResource("4_lmird")
+centered = false
+
+[node name="Parallax2D5" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(1.3, 1)
+repeat_size = Vector2(306, 0)
+repeat_times = 100
+
+[node name="Foreground" type="Sprite2D" parent="Node/Parallax2D5"]
+z_index = 1
+texture = ExtResource("5_goh2a")
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, 68.5)
+zoom = Vector2(4, 4)
+script = ExtResource("6_oiodx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Camera2D"]
+position = Vector2(0, 88)
+sprite_frames = SubResource("SpriteFrames_guplb")
+animation = &"TrainDriving"
+autoplay = "TrainDriving"
+
+[node name="Scene_Transition" parent="Camera2D" instance=ExtResource("8_y0kao")]
