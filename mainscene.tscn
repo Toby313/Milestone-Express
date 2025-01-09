@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bsb8b58y2n1wh" path="res://Sprites/Background Layers/BackgroundLayer2.png" id="3_oslpj"]
 [ext_resource type="Script" path="res://Scripts/Cameramovement.cs" id="3_x3l7a"]
 [ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_p3yig"]
-[ext_resource type="Texture2D" uid="uid://q7548djipyia" path="res://Sprites/Background Layers/FenceLayer.png" id="4_pkfyb"]
+[ext_resource type="Texture2D" uid="uid://d0o13tj63lw08" path="res://Sprites/Background Layers/WoodFenceLayer.png" id="5_0pg62"]
 [ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="5_ayh2t"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="6_unctp"]
 [ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="9_xgww2"]
@@ -259,7 +259,7 @@ repeat_size = Vector2(303, 0)
 repeat_times = 100
 
 [node name="Fence" type="Sprite2D" parent="Node/Parallax2D4"]
-texture = ExtResource("4_pkfyb")
+texture = ExtResource("5_0pg62")
 centered = false
 
 [node name="Parallax2D6" type="Parallax2D" parent="Node"]
