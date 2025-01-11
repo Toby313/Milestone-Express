@@ -1,13 +1,71 @@
-[gd_scene load_steps=22 format=3 uid="uid://lluk8emraqwo"]
+[gd_scene load_steps=32 format=3 uid="uid://lluk8emraqwo"]
 
-[ext_resource type="Texture2D" uid="uid://dvvgauqy034s5" path="res://SkyLayer.png" id="1_wyqb4"]
-[ext_resource type="Texture2D" uid="uid://768iiiooiulk" path="res://BackergroundLayer.png" id="2_03t8t"]
-[ext_resource type="Texture2D" uid="uid://cuqe86xxwrcyi" path="res://BackgroundLayer.png" id="3_q34qj"]
-[ext_resource type="Texture2D" uid="uid://dwbw2wocrmvhe" path="res://MiddleLayer.png" id="4_lmird"]
-[ext_resource type="Texture2D" uid="uid://cb6a0v3ohihx3" path="res://ForegroundLayer.png" id="5_goh2a"]
-[ext_resource type="Texture2D" uid="uid://byfled1uprxdq" path="res://ArrivaAnimation-Sheet.png" id="6_5cpqv"]
+[ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_wyqb4"]
+[ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_03t8t"]
+[ext_resource type="Texture2D" uid="uid://bsb8b58y2n1wh" path="res://Sprites/Background Layers/BackgroundLayer2.png" id="3_f4a2t"]
+[ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer1.png" id="3_q34qj"]
+[ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_lmird"]
+[ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="5_goh2a"]
+[ext_resource type="Texture2D" uid="uid://q7548djipyia" path="res://Sprites/Background Layers/FenceLayer.png" id="5_lbig0"]
+[ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="6_5cpqv"]
 [ext_resource type="Script" path="res://MoveStation.cs" id="6_oiodx"]
+[ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="8_cgajj"]
 [ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="8_y0kao"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7f6j"]
+atlas = ExtResource("8_cgajj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4qq0"]
+atlas = ExtResource("8_cgajj")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oejan"]
+atlas = ExtResource("8_cgajj")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lm0j"]
+atlas = ExtResource("8_cgajj")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaje3"]
+atlas = ExtResource("8_cgajj")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_630tn"]
+atlas = ExtResource("8_cgajj")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fxg4o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7f6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4qq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oejan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lm0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaje3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_630tn")
+}],
+"loop": true,
+"name": &"BirdFlying",
+"speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nwxfv"]
 atlas = ExtResource("6_5cpqv")
@@ -112,7 +170,8 @@ animations = [{
 position = Vector2(14953, 0)
 
 [node name="Parallax2D" type="Parallax2D" parent="Node"]
-scroll_scale = Vector2(0.2, 1)
+scroll_scale = Vector2(0, 1)
+scroll_offset = Vector2(-100, 0)
 repeat_size = Vector2(306, 0)
 repeat_times = 100
 
@@ -121,28 +180,47 @@ texture = ExtResource("1_wyqb4")
 centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="Node"]
-scroll_scale = Vector2(0.4, 1)
-repeat_size = Vector2(306, 0)
-repeat_times = 100
+scroll_scale = Vector2(0.2, 1)
+repeat_size = Vector2(584, 0)
+repeat_times = 52
 
-[node name="Backerground" type="Sprite2D" parent="Node/Parallax2D2"]
+[node name="Background3" type="Sprite2D" parent="Node/Parallax2D2"]
 texture = ExtResource("2_03t8t")
 centered = false
 
-[node name="Parallax2D3" type="Parallax2D" parent="Node"]
-scroll_scale = Vector2(0.7, 1)
-repeat_size = Vector2(306, 0)
-repeat_times = 100
+[node name="Parallax2D7" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.4, 1)
+scroll_offset = Vector2(-50, 0)
+repeat_size = Vector2(608, 0)
+repeat_times = 50
 
-[node name="Background" type="Sprite2D" parent="Node/Parallax2D3"]
+[node name="Background2" type="Sprite2D" parent="Node/Parallax2D7"]
+texture = ExtResource("3_f4a2t")
+centered = false
+
+[node name="Parallax2D3" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.55, 1)
+repeat_size = Vector2(608, 0)
+repeat_times = 50
+
+[node name="Background1" type="Sprite2D" parent="Node/Parallax2D3"]
 texture = ExtResource("3_q34qj")
 centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.7, 1)
 repeat_size = Vector2(303, 0)
 repeat_times = 100
 
-[node name="Middle" type="Sprite2D" parent="Node/Parallax2D4"]
+[node name="Fence" type="Sprite2D" parent="Node/Parallax2D4"]
+texture = ExtResource("5_lbig0")
+centered = false
+
+[node name="Parallax2D6" type="Parallax2D" parent="Node"]
+repeat_size = Vector2(303, 0)
+repeat_times = 100
+
+[node name="Middle" type="Sprite2D" parent="Node/Parallax2D6"]
 texture = ExtResource("4_lmird")
 centered = false
 
@@ -152,8 +230,22 @@ repeat_size = Vector2(306, 0)
 repeat_times = 100
 
 [node name="Foreground" type="Sprite2D" parent="Node/Parallax2D5"]
+visible = false
 z_index = 1
 texture = ExtResource("5_goh2a")
+centered = false
+
+[node name="Parallax2D8" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.7, 1)
+scroll_offset = Vector2(0, 10)
+repeat_size = Vector2(900, 0)
+repeat_times = 50
+
+[node name="Birds" type="AnimatedSprite2D" parent="Node/Parallax2D8"]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_fxg4o")
+animation = &"BirdFlying"
+autoplay = "BirdFlying"
 centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]

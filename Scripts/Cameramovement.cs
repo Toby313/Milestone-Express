@@ -4,7 +4,7 @@ using System;
 
 public partial class Cameramovement : Camera2D
 {
-    float maxSpeed = 50; // The target speed the background reaches
+    float maxSpeed = 180; // The target speed the background reaches
     float accelerationDuration = 1.5f; // Time it takes to reach max speed
     float currentSpeed = 0.0f; // The speed that starts at 0 and increases
     float MoveDuration = 5.0f; // Duration of the movement

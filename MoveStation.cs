@@ -3,8 +3,8 @@ using System;
 
 public partial class MoveStation : Camera2D
 {
-    int initialSpeed = 50; // The starting speed of the train
-    int currentSpeed = 50; // The speed that will gradually decrease
+    int initialSpeed = 180; // The starting speed of the train
+    int currentSpeed = 180; // The speed that will gradually decrease
     float MoveDuration = 3.0f; // Duration before slowing down starts
     float DecelerationDuration = 2.0f; // Time over which the train slows down
     double elapsedTime = 0.0;
