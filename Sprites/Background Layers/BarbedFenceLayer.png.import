@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://q7548djipyia"
-path="res://.godot/imported/FenceLayer.png-f96ce24132335a3f61fdafe5db62b57a.ctex"
+path="res://.godot/imported/BarbedFenceLayer.png-c3bcff6d2a3de4b25b86539812ac584f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Background Layers/FenceLayer.png"
-dest_files=["res://.godot/imported/FenceLayer.png-f96ce24132335a3f61fdafe5db62b57a.ctex"]
+source_file="res://Sprites/Background Layers/BarbedFenceLayer.png"
+dest_files=["res://.godot/imported/BarbedFenceLayer.png-c3bcff6d2a3de4b25b86539812ac584f.ctex"]
 
 [params]
 
