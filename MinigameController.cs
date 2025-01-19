@@ -18,7 +18,7 @@ public partial class MinigameController : Node2D
 	{
 		// Get UI elements
 		FeedbackLabel = GetNode<Label>("FeedbackLabel");
-		AnvilSound = GetNode<AudioStreamPlayer>("BeatPlayer");
+		AnvilSound = GetNode<AudioStreamPlayer>("AnvilSound");
 	}
 
 	public override void _Process(double delta)
@@ -57,12 +57,12 @@ public partial class MinigameController : Node2D
 	{
 		float timingError = Math.Abs(timeSinceLastBeat - beatInterval / 2); // How far off they are
 
-		if (timingError <= 0.1f) // Perfect hit
+		if (timingError <= 0.05f) // Perfect hit
 		{
 			FeedbackLabel.Text = "Perfect!";
 			score += 100;
 		}
-		else if (timingError <= 0.2f) // Good hit
+		else if (timingError <= 0.1f) // Good hit
 		{
 			FeedbackLabel.Text = "Good!";
 			score += 50;

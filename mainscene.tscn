@@ -221,6 +221,7 @@ position = Vector2(14953, 0)
 z_index = 1
 position = Vector2(-46, 91)
 texture = ExtResource("1_nw4a3")
+offset = Vector2(-13500, 0)
 
 [node name="Parallax2D" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(0, 1)
