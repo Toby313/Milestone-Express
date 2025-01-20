@@ -1,0 +1,171 @@
+[gd_scene load_steps=21 format=3 uid="uid://xxlodoouusvo"]
+
+[ext_resource type="Texture2D" uid="uid://bmdq7rkuanajk" path="res://Assets/Mini game gym.png" id="1_6iik3"]
+[ext_resource type="PackedScene" uid="uid://ek3uath5yprv" path="res://Scenes/player.tscn" id="1_r5dsx"]
+[ext_resource type="Texture2D" uid="uid://cv7ip0s4hqyf0" path="res://Assets/korfball goal-export.png" id="3_1apsb"]
+[ext_resource type="Texture2D" uid="uid://dd2q5kxcj0wqe" path="res://Assets/Lacrosse stick.png" id="5_3dv6a"]
+[ext_resource type="Texture2D" uid="uid://dekh2xlfo3kwb" path="res://Assets/Hockey stick.png" id="7_ehgsg"]
+[ext_resource type="PackedScene" uid="uid://b34tlwcxjocjo" path="res://Scenes/hockey_ball.tscn" id="7_smvq6"]
+[ext_resource type="PackedScene" uid="uid://l8b2uafdmre7" path="res://Scenes/korfball_ball.tscn" id="8_6ixtn"]
+[ext_resource type="PackedScene" uid="uid://dxmrs7fvq6nat" path="res://Scenes/lacrosse_ball.tscn" id="8_8y0gc"]
+[ext_resource type="Script" path="res://win_area.gd" id="9_xl5hy"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_cfs2v"]
+normal = Vector2(-0.999355, 0.035905)
+distance = -1152.41
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rou2d"]
+distance = -649.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p4os4"]
+normal = Vector2(1, 0)
+distance = 1.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_1p75i"]
+normal = Vector2(-0.00649337, 0.999979)
+distance = 0.155841
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0h8i"]
+radius = 5.0
+height = 144.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ejef"]
+radius = 18.0278
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m6krd"]
+radius = 16.0
+height = 32.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8hqls"]
+a = Vector2(52.6667, 386.667)
+b = Vector2(32, 408)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gsnqn"]
+a = Vector2(16, 0.399994)
+b = Vector2(2.8, 20.8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_p4yjx"]
+a = Vector2(-4, -2.40001)
+b = Vector2(4, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_70lqa"]
+size = Vector2(25, 30.5)
+
+[node name="Sports Guesser" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -14.0
+offset_top = -1.0
+offset_right = 1147.0
+offset_bottom = 658.0
+texture = ExtResource("1_6iik3")
+
+[node name="Player" parent="." instance=ExtResource("1_r5dsx")]
+top_level = true
+position = Vector2(565, 360)
+scale = Vector2(0.4, 0.4)
+
+[node name="Right wall" type="CharacterBody2D" parent="."]
+position = Vector2(0, 88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right wall"]
+position = Vector2(-1, 209)
+shape = SubResource("WorldBoundaryShape2D_cfs2v")
+
+[node name="Floor" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("WorldBoundaryShape2D_rou2d")
+
+[node name="Left wall" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left wall"]
+position = Vector2(0, 136)
+shape = SubResource("WorldBoundaryShape2D_p4os4")
+
+[node name="Roof" type="CharacterBody2D" parent="."]
+position = Vector2(522, 78)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roof"]
+shape = SubResource("WorldBoundaryShape2D_1p75i")
+
+[node name="Korfball Goal" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Korfball Goal"]
+texture_filter = 1
+position = Vector2(76, 225)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_1apsb")
+
+[node name="Score" type="CollisionShape2D" parent="Korfball Goal"]
+position = Vector2(62, 237)
+shape = SubResource("CapsuleShape2D_r0h8i")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Korfball Goal"]
+position = Vector2(81, 170)
+shape = SubResource("CircleShape2D_7ejef")
+
+[node name="Lacrosse Stick" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Lacrosse Stick"]
+texture_filter = 1
+position = Vector2(57, 381)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("5_3dv6a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lacrosse Stick"]
+position = Vector2(75, 367)
+shape = SubResource("CapsuleShape2D_m6krd")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Lacrosse Stick"]
+position = Vector2(-17, -202)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("SegmentShape2D_8hqls")
+
+[node name="Hockey Stick" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Hockey Stick"]
+texture_filter = 1
+position = Vector2(68, 516)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("7_ehgsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hockey Stick"]
+position = Vector2(54, 487)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("SegmentShape2D_gsnqn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hockey Stick"]
+position = Vector2(48, 537)
+scale = Vector2(2.5, 2.5)
+shape = SubResource("SegmentShape2D_p4yjx")
+
+[node name="Korfball Ball" parent="." instance=ExtResource("8_6ixtn")]
+position = Vector2(993, 545)
+collision_layer = 2
+gravity_scale = 0.0
+
+[node name="Hockey Ball" parent="." instance=ExtResource("7_smvq6")]
+position = Vector2(1056, 149)
+gravity_scale = 0.0
+
+[node name="Lacrosse Ball" parent="." instance=ExtResource("8_8y0gc")]
+position = Vector2(781, 114)
+gravity_scale = 0.0
+
+[node name="Win area" type="Area2D" parent="." node_paths=PackedStringArray("label")]
+collision_mask = 3
+script = ExtResource("9_xl5hy")
+label = NodePath("Label")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win area"]
+position = Vector2(82.5, 201.75)
+shape = SubResource("RectangleShape2D_70lqa")
+disabled = true
+
+[node name="Label" type="Label" parent="Win area"]
+offset_left = 122.0
+offset_top = 133.0
+offset_right = 1025.0
+offset_bottom = 576.0

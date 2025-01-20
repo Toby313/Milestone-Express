@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxmrs7fvq6nat"]
+
+[ext_resource type="Texture2D" uid="uid://bhccldef0howo" path="res://Assets/Lacrosse ball.png" id="1_3jt1u"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1lm1a"]
+bounce = 0.8
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yetso"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qyty0"]
+radius = 4.41814
+
+[node name="Lacrosse Ball" type="RigidBody2D"]
+collision_layer = 3
+physics_material_override = SubResource("PhysicsMaterial_1lm1a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yetso")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_3jt1u")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_qyty0")

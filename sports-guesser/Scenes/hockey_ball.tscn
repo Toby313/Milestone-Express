@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://b34tlwcxjocjo"]
+
+[ext_resource type="Texture2D" uid="uid://clbjnrgtyuc06" path="res://Assets/Hockey ball.png" id="1_h47qb"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_6u0p1"]
+bounce = 0.8
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wana4"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hwnkt"]
+radius = 4.4
+
+[node name="Hockey Ball" type="RigidBody2D"]
+collision_layer = 3
+physics_material_override = SubResource("PhysicsMaterial_6u0p1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_wana4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_h47qb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_hwnkt")
