@@ -1,14 +1,16 @@
 [gd_scene load_steps=38 format=3 uid="uid://dl3xov5wp10wb"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_08gkf"]
-[ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_0ee11"]
-[ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer1.png" id="3_8ujj5"]
-[ext_resource type="Texture2D" uid="uid://bsb8b58y2n1wh" path="res://Sprites/Background Layers/BackgroundLayer2.png" id="3_oslpj"]
+[ext_resource type="Texture2D" uid="uid://dpkvdis6jlcks" path="res://Sprites/Background Objects/Crossing.png" id="1_nw4a3"]
+[ext_resource type="Texture2D" uid="uid://dhl0rkfcbyevv" path="res://Sprites/Background Layers/GrassLayer3.png" id="3_nouvf"]
 [ext_resource type="Script" path="res://Scripts/Cameramovement.cs" id="3_x3l7a"]
+[ext_resource type="Texture2D" uid="uid://cssofeypfyrht" path="res://Sprites/Background Layers/WheatEdge.png" id="4_2i8jm"]
 [ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_p3yig"]
-[ext_resource type="Texture2D" uid="uid://d0o13tj63lw08" path="res://Sprites/Background Layers/WoodFenceLayer.png" id="5_0pg62"]
+[ext_resource type="Texture2D" uid="uid://sa30r756n1qi" path="res://Sprites/Background Layers/GrassLayer2.png" id="4_rkwgs"]
 [ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="5_ayh2t"]
+[ext_resource type="Texture2D" uid="uid://d2p5hsuae6mjo" path="res://Sprites/Background Layers/GrassLayer1.png" id="5_gpbuc"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="6_unctp"]
+[ext_resource type="Texture2D" uid="uid://q7548djipyia" path="res://Sprites/Background Layers/BarbedFenceLayer.png" id="7_oia85"]
 [ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="9_xgww2"]
 [ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="11_658ue"]
 
@@ -216,6 +218,12 @@ animations = [{
 [node name="Node" type="Node2D" parent="."]
 position = Vector2(14953, 0)
 
+[node name="Sprite2D" type="Sprite2D" parent="Node"]
+z_index = 1
+position = Vector2(-46, 91)
+texture = ExtResource("1_nw4a3")
+offset = Vector2(-13500, 0)
+
 [node name="Parallax2D" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(0, 1)
 scroll_offset = Vector2(-100, 0)
@@ -227,12 +235,12 @@ texture = ExtResource("1_08gkf")
 centered = false
 
 [node name="Parallax2D2" type="Parallax2D" parent="Node"]
-scroll_scale = Vector2(0.2, 1)
+scroll_scale = Vector2(0.25, 1)
 repeat_size = Vector2(584, 0)
 repeat_times = 52
 
 [node name="Background3" type="Sprite2D" parent="Node/Parallax2D2"]
-texture = ExtResource("2_0ee11")
+texture = ExtResource("3_nouvf")
 centered = false
 
 [node name="Parallax2D7" type="Parallax2D" parent="Node"]
@@ -242,7 +250,7 @@ repeat_size = Vector2(608, 0)
 repeat_times = 50
 
 [node name="Background2" type="Sprite2D" parent="Node/Parallax2D7"]
-texture = ExtResource("3_oslpj")
+texture = ExtResource("4_rkwgs")
 centered = false
 
 [node name="Parallax2D3" type="Parallax2D" parent="Node"]
@@ -251,7 +259,17 @@ repeat_size = Vector2(608, 0)
 repeat_times = 50
 
 [node name="Background1" type="Sprite2D" parent="Node/Parallax2D3"]
-texture = ExtResource("3_8ujj5")
+texture = ExtResource("5_gpbuc")
+centered = false
+
+[node name="Parallax2D9" type="Parallax2D" parent="Node"]
+scroll_scale = Vector2(0.67, 1)
+repeat_size = Vector2(304, 0)
+repeat_times = 100
+
+[node name="Wheat" type="Sprite2D" parent="Node/Parallax2D9"]
+visible = false
+texture = ExtResource("4_2i8jm")
 centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="Node"]
@@ -260,7 +278,7 @@ repeat_size = Vector2(303, 0)
 repeat_times = 100
 
 [node name="Fence" type="Sprite2D" parent="Node/Parallax2D4"]
-texture = ExtResource("5_0pg62")
+texture = ExtResource("7_oia85")
 centered = false
 
 [node name="Parallax2D6" type="Parallax2D" parent="Node"]
