@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://t1jj4hlpjku7"]
+
+[ext_resource type="Texture2D" uid="uid://vtw15s565k7" path="res://Sprites/Alex_sprites/Assets/smoke_small2.png" id="1_0v4h8"]
+[ext_resource type="Script" path="res://Scripts/Cloud.cs" id="1_acplx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pvcxy"]
+radius = 13.0
+
+[node name="Cloud" type="Node2D"]
+script = ExtResource("1_acplx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0v4h8")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_pvcxy")
