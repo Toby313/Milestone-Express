@@ -1,10 +1,9 @@
-class_name Main character
 extends CharacterBody2D
 
 @export var speed : float = 300  # speed in pixels/sec
 @export var animation_tree: AnimationTree
 
-var input 
+var input : Vector2
 
 var playback : AnimationNodeStateMachinePlayback
 
@@ -24,11 +23,11 @@ func select_animation():
 	if velocity == Vector2.ZERO:
 		playback.travel("Idle")
 	else:
-		playback.travel("Walk")
+		playback.travel("Walking")
 
 func update_animation_parameters():
 	if input == Vector2.ZERO:
 		return
 		
 	animation_tree["parameters/Idle/blend_position"] = input
-	animation_tree["parameters/Walk/blend_position"] = input
+	animation_tree["parameters/Walking/blend_position"] = input

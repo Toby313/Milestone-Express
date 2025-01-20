@@ -5,9 +5,9 @@ using System;
 public partial class Cameramovement : Camera2D
 {
     float maxSpeed = 180; // The target speed the background reaches
-    float accelerationDuration = 2f; // Time it takes to reach max speed
+    float accelerationDuration = 3f; // Time it takes to reach max speed
     float currentSpeed = 0.0f; // The speed that starts at 0 and increases
-    float MoveDuration = 5.5f; // Duration of the movement
+    float MoveDuration = 7f; // Duration of the movement
     double elapsedTime = 0.0;
     bool isMoving = true;
     bool isWaiting = false;
@@ -59,8 +59,7 @@ public partial class Cameramovement : Camera2D
         GD.Print("Starting scene transition with 1-second delay...");
         transitionTimer.Start(); // Start the transition timer
 
-        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
-        audioManager.StopStartTrain();
+
     }
 
     private void OnTransitionTimerTimeout()
@@ -71,6 +70,9 @@ public partial class Cameramovement : Camera2D
 
     private void TransitionToNextScene()
     {
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StopStartTrain();
+        
         var nextScenePath = "res://Inside.tscn"; // Path to the next scene
         var nextScene = (PackedScene)ResourceLoader.Load(nextScenePath);
         if (nextScene != null)
@@ -82,6 +84,7 @@ public partial class Cameramovement : Camera2D
         {
             GD.PrintErr("Failed to load the next scene.");
         }
+       
     }
 
     public override void _Process(double delta)
