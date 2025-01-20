@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://bkn83luun4p83"]
+[gd_scene load_steps=45 format=3 uid="uid://bkjtf4qxnuktq"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_kw8o3"]
 [ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_47tdr"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="8_j443u"]
 [ext_resource type="Script" path="res://Act3.cs" id="9_00pjj"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="10_3h5ss"]
-[ext_resource type="PackedScene" path="res://scene_transition.tscn" id="11_0pjir"]
+[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="11_0pjir"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mrd4y"]
 atlas = ExtResource("4_4v0wf")

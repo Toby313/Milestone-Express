@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://de3c3p2v05xbo"]
+[gd_scene load_steps=41 format=3 uid="uid://lluk8emraqwo"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_wyqb4"]
 [ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_lmird"]
@@ -7,7 +7,7 @@
 [ext_resource type="Script" path="res://MoveStation.cs" id="6_oiodx"]
 [ext_resource type="Texture2D" uid="uid://dhl0rkfcbyevv" path="res://Sprites/Background Layers/GrassLayer3.png" id="8_71r8f"]
 [ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="8_cgajj"]
-[ext_resource type="PackedScene" path="res://scene_transition.tscn" id="8_y0kao"]
+[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="8_y0kao"]
 [ext_resource type="Texture2D" uid="uid://sa30r756n1qi" path="res://Sprites/Background Layers/GrassLayer2.png" id="9_xuaf8"]
 [ext_resource type="Texture2D" uid="uid://blqlx3kmvogyi" path="res://Sprites/Windmill-Sheet.png" id="10_rrbou"]
 [ext_resource type="Texture2D" uid="uid://d2p5hsuae6mjo" path="res://Sprites/Background Layers/GrassLayer1.png" id="11_ttfjb"]
@@ -204,7 +204,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Node" type="Node2D" parent="."]
 position = Vector2(14953, 0)
