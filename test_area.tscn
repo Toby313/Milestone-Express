@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg4vb8r0h3mbu"]
+
+[ext_resource type="Script" path="res://TestArea.cs" id="1_114v6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_upnvq"]
+size = Vector2(40, 40)
+
+[node name="TestArea" type="Node2D"]
+script = ExtResource("1_114v6")
+
+[node name="Leaves" type="Area2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Leaves"]
+offset_left = 346.0
+offset_top = 245.0
+offset_right = 386.0
+offset_bottom = 285.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Leaves"]
+position = Vector2(366, 265)
+shape = SubResource("RectangleShape2D_upnvq")

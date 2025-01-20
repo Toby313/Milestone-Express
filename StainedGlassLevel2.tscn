@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://r1prsyb2mdcy"]
+
+[ext_resource type="Script" path="res://StainedLevel2.cs" id="1_nqlwc"]
+[ext_resource type="Texture2D" uid="uid://bgrm5xh16p1jw" path="res://Tree_Trunk.png" id="3_plcbu"]
+[ext_resource type="Texture2D" uid="uid://bwlam7yscnpqv" path="res://Tree_top.png" id="4_pbdpd"]
+[ext_resource type="Texture2D" uid="uid://b37pw81v8ty14" path="res://Blue_Sky.png" id="5_vt13e"]
+[ext_resource type="Texture2D" uid="uid://cknntln0fhxs0" path="res://StainedSkater - Copy-sheet.png" id="6_m47h6"]
+[ext_resource type="Texture2D" uid="uid://ckak8dmoipbq0" path="res://ConfirmButton.png" id="6_yvjeu"]
+[ext_resource type="Texture2D" uid="uid://bfngv6hn7xdef" path="res://DetailedRed.png" id="7_rb717"]
+[ext_resource type="Texture2D" uid="uid://bcxdatipfkuyh" path="res://DetailedGreen.png" id="8_6aosh"]
+[ext_resource type="Texture2D" uid="uid://cwf1pv6fw7g6x" path="res://DetailedBlue.png" id="9_k3j0w"]
+[ext_resource type="Texture2D" uid="uid://bduumi3scpj05" path="res://DetailedYellow.png" id="10_knedg"]
+[ext_resource type="Texture2D" uid="uid://bu7dofi5fx5cs" path="res://DetailedBrown.png" id="11_36qpf"]
+[ext_resource type="Texture2D" uid="uid://b8el6bqb71v8g" path="res://Raw Sprites/TableBackground.png" id="13_hqnew"]
+
+[node name="StainedGlassLvl2" type="Node2D"]
+script = ExtResource("1_nqlwc")
+
+[node name="Sprite1" type="Sprite2D" parent="."]
+position = Vector2(632, 322)
+scale = Vector2(0.656667, 0.736667)
+texture = ExtResource("3_plcbu")
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2(606, 273)
+scale = Vector2(0.8325, 0.711667)
+texture = ExtResource("4_pbdpd")
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(596, 287)
+texture = ExtResource("5_vt13e")
+
+[node name="Stained_glass_board" type="Sprite2D" parent="."]
+position = Vector2(593, 270)
+scale = Vector2(0.893, 0.893)
+texture = ExtResource("6_m47h6")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -6
+position = Vector2(3398, 817.36)
+scale = Vector2(43.5664, 28.184)
+texture = ExtResource("13_hqnew")
+
+[node name="ConfirmButton" type="Button" parent="."]
+offset_left = 870.0
+offset_top = 162.0
+offset_right = 1060.0
+offset_bottom = 352.0
+flat = true
+
+[node name="Confirm" type="Sprite2D" parent="ConfirmButton"]
+position = Vector2(99, 98)
+scale = Vector2(0.693333, 0.643333)
+texture = ExtResource("6_yvjeu")
+
+[node name="ButtonRed" type="Button" parent="."]
+z_index = 1
+offset_left = 92.0
+offset_top = 82.0
+offset_right = 214.0
+offset_bottom = 163.0
+flat = true
+
+[node name="Red" type="Sprite2D" parent="ButtonRed"]
+position = Vector2(68, 26)
+scale = Vector2(0.563917, 0.352667)
+texture = ExtResource("7_rb717")
+
+[node name="ButtonGreen" type="Button" parent="."]
+offset_left = 220.0
+offset_top = 156.0
+offset_right = 346.0
+offset_bottom = 234.0
+flat = true
+
+[node name="Green" type="Sprite2D" parent="ButtonGreen"]
+position = Vector2(67, 32)
+scale = Vector2(0.515667, 0.334833)
+texture = ExtResource("8_6aosh")
+
+[node name="ButtonBlue" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 190.0
+offset_right = 161.0
+offset_bottom = 266.0
+flat = true
+
+[node name="Blue" type="Sprite2D" parent="ButtonBlue"]
+position = Vector2(67, 29)
+scale = Vector2(0.47825, 0.288083)
+texture = ExtResource("9_k3j0w")
+
+[node name="ButtonYellow" type="Button" parent="."]
+offset_left = 199.0
+offset_top = 261.0
+offset_right = 328.0
+offset_bottom = 342.0
+flat = true
+
+[node name="Yellow" type="Sprite2D" parent="ButtonYellow"]
+position = Vector2(73, 32)
+scale = Vector2(0.544, 0.32125)
+texture = ExtResource("10_knedg")
+
+[node name="ButtonMagenta" type="Button" parent="."]
+offset_left = 68.0
+offset_top = 340.0
+offset_right = 195.0
+offset_bottom = 420.0
+flat = true
+
+[node name="Brown" type="Sprite2D" parent="ButtonMagenta"]
+position = Vector2(66, 33)
+scale = Vector2(0.503583, 0.34725)
+texture = ExtResource("11_36qpf")

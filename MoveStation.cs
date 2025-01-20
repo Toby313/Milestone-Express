@@ -5,7 +5,7 @@ public partial class MoveStation : Camera2D
 {
     int initialSpeed = 180; // The starting speed of the train
     int currentSpeed = 180; // The speed that will gradually decrease
-    float MoveDuration = 3.0f; // Duration before slowing down starts
+    float MoveDuration = 5.0f; // Duration before slowing down starts
     float DecelerationDuration = 2.0f; // Time over which the train slows down
     double elapsedTime = 0.0;
     double decelerationStartTime = 0.0; // Time when deceleration starts
@@ -36,6 +36,8 @@ public partial class MoveStation : Camera2D
 		GD.Print("Playing fade_Out animation.");
         Scene_Transition.Play("Fade_Out");
 
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StartStopTrain();
     }
 
     public override void _Process(double delta)
@@ -114,6 +116,13 @@ public partial class MoveStation : Camera2D
 
         GD.Print("Starting scene transition with 1-second delay...");
         transitionTimer.Start(); // Start the transition timer
+
+        if (Scene_Transition != null)
+        {
+            Scene_Transition.Play("Fade_In1");
+        }
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StopStopTrain();
     }
 
     private void OnTransitionTimerTimeout()
@@ -123,7 +132,7 @@ public partial class MoveStation : Camera2D
 
     private void TransitionToNextScene()
     {
-        var nextScenePath = "res://Inside.tscn"; // Path to the next scene
+        var nextScenePath = "res://SportMiniGame.tscn"; // Path to the next scene
         var nextScene = (PackedScene)ResourceLoader.Load(nextScenePath);
         if (nextScene != null)
         {

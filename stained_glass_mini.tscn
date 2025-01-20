@@ -1,0 +1,130 @@
+[gd_scene load_steps=15 format=3 uid="uid://jeqqorvokjrg"]
+
+[ext_resource type="Script" path="res://StainedGlassGame.cs" id="1_n8mi2"]
+[ext_resource type="Texture2D" uid="uid://r11ixjok3bbp" path="res://SpriteWood.png" id="2_doisn"]
+[ext_resource type="Texture2D" uid="uid://ckak8dmoipbq0" path="res://ConfirmButton.png" id="2_ibldn"]
+[ext_resource type="Texture2D" uid="uid://bgi4ns4fyivmw" path="res://Bottom_Skate.png" id="3_l4wj8"]
+[ext_resource type="Texture2D" uid="uid://bx2iq5r8d4qyo" path="res://DetailedWoody.png" id="3_vfm4r"]
+[ext_resource type="Texture2D" uid="uid://gw71w88ms2th" path="res://Spaces_Skate.png" id="4_5kng7"]
+[ext_resource type="Texture2D" uid="uid://dimbkw8atprxu" path="res://DetailedSilver.png" id="4_168a5"]
+[ext_resource type="Texture2D" uid="uid://cwf1pv6fw7g6x" path="res://DetailedBlue.png" id="5_q2mh5"]
+[ext_resource type="Texture2D" uid="uid://ja2amyefc12f" path="res://Middel_Skate.png" id="5_q8w1h"]
+[ext_resource type="Texture2D" uid="uid://c8y48mr1dcqqq" path="res://StainedSkater.png" id="6_6v3jh"]
+[ext_resource type="Texture2D" uid="uid://bduumi3scpj05" path="res://DetailedYellow.png" id="6_lwnt3"]
+[ext_resource type="Texture2D" uid="uid://bu7dofi5fx5cs" path="res://DetailedBrown.png" id="7_jfncv"]
+[ext_resource type="Texture2D" uid="uid://b8el6bqb71v8g" path="res://Raw Sprites/TableBackground.png" id="13_6jx7t"]
+[ext_resource type="Texture2D" uid="uid://b37pw81v8ty14" path="res://Blue_Sky.png" id="14_jjf0g"]
+
+[node name="StainedGlassMini" type="Node2D"]
+script = ExtResource("1_n8mi2")
+
+[node name="Fix2D" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(593, 256)
+scale = Vector2(1, 0.686667)
+texture = ExtResource("14_jjf0g")
+
+[node name="ConfirmButton" type="Button" parent="."]
+offset_left = 870.0
+offset_top = 162.0
+offset_right = 1060.0
+offset_bottom = 352.0
+flat = true
+
+[node name="Confirm" type="Sprite2D" parent="ConfirmButton"]
+position = Vector2(99, 98)
+scale = Vector2(0.693333, 0.643333)
+texture = ExtResource("2_ibldn")
+
+[node name="ButtonRed" type="Button" parent="."]
+z_index = 1
+offset_left = 92.0
+offset_top = 82.0
+offset_right = 214.0
+offset_bottom = 163.0
+flat = true
+
+[node name="Woody" type="Sprite2D" parent="ButtonRed"]
+position = Vector2(68, 32)
+scale = Vector2(0.5145, 0.325333)
+texture = ExtResource("3_vfm4r")
+
+[node name="ButtonGreen" type="Button" parent="."]
+offset_left = 220.0
+offset_top = 156.0
+offset_right = 346.0
+offset_bottom = 234.0
+flat = true
+
+[node name="Silver" type="Sprite2D" parent="ButtonGreen"]
+position = Vector2(61, 34)
+scale = Vector2(0.498, 0.309667)
+texture = ExtResource("4_168a5")
+
+[node name="ButtonBlue" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 190.0
+offset_right = 161.0
+offset_bottom = 266.0
+flat = true
+
+[node name="Blue" type="Sprite2D" parent="ButtonBlue"]
+position = Vector2(67, 29)
+scale = Vector2(0.47825, 0.288083)
+texture = ExtResource("5_q2mh5")
+
+[node name="ButtonYellow" type="Button" parent="."]
+offset_left = 199.0
+offset_top = 261.0
+offset_right = 328.0
+offset_bottom = 342.0
+flat = true
+
+[node name="Yellow" type="Sprite2D" parent="ButtonYellow"]
+position = Vector2(73, 32)
+scale = Vector2(0.544, 0.32125)
+texture = ExtResource("6_lwnt3")
+
+[node name="ButtonMagenta" type="Button" parent="."]
+offset_left = 68.0
+offset_top = 340.0
+offset_right = 195.0
+offset_bottom = 420.0
+flat = true
+
+[node name="Brown" type="Sprite2D" parent="ButtonMagenta"]
+position = Vector2(66, 33)
+scale = Vector2(0.503583, 0.34725)
+texture = ExtResource("7_jfncv")
+
+[node name="WoodenBoard" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(-427, 162)
+scale = Vector2(1.5125, 1.41683)
+texture = ExtResource("2_doisn")
+
+[node name="Sprite1" type="Sprite2D" parent="."]
+position = Vector2(605.575, 282)
+scale = Vector2(0.8895, 0.85)
+texture = ExtResource("3_l4wj8")
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2(605.5, 280.5)
+scale = Vector2(0.896667, 0.863333)
+texture = ExtResource("4_5kng7")
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+position = Vector2(605, 281)
+scale = Vector2(0.921, 0.85)
+texture = ExtResource("5_q8w1h")
+
+[node name="Stained_glass_board" type="Sprite2D" parent="."]
+position = Vector2(593, 270)
+scale = Vector2(0.892857, 0.850446)
+texture = ExtResource("6_6v3jh")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -6
+position = Vector2(3398, 802.5)
+scale = Vector2(43.5664, 27.8125)
+texture = ExtResource("13_6jx7t")

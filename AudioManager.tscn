@@ -1,14 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://t2q4ps7xj0ux"]
+[gd_scene load_steps=11 format=3 uid="uid://t2q4ps7xj0ux"]
 
-[ext_resource type="Script" path="res://AudioManager.cs" id="1_dhnm3"]
-[ext_resource type="AudioStream" uid="uid://bxts6dhbia0t1" path="res://Assets/Sounds/Theme song.mp3" id="2_kohrm"]
-[ext_resource type="Texture2D" uid="uid://bysbyxlwvenuc" path="res://Sprite-0001.png" id="3_aj6wf"]
+[ext_resource type="Script" path="res://AudioManager.cs" id="1_jbq8g"]
+[ext_resource type="AudioStream" uid="uid://be8m5xmknjwh0" path="res://Assets/Sounds/ProtoVoiceOver.mp3" id="2_1wal4"]
+[ext_resource type="AudioStream" uid="uid://by2kat4cyrk4w" path="res://Audio/Act2C.mp3" id="2_38b8e"]
+[ext_resource type="AudioStream" uid="uid://cdy1hqr020wsw" path="res://Audio/Act3B.mp3" id="3_a2t7h"]
+[ext_resource type="AudioStream" uid="uid://deyr547h10877" path="res://Audio/Act4C.mp3" id="4_4eo8g"]
+[ext_resource type="Texture2D" uid="uid://bbq7nh57c5r0q" path="res://TextBoxRetro.png" id="6_rcv1u"]
+[ext_resource type="AudioStream" uid="uid://dwsgk64eja2tf" path="res://Assets/Sounds/TrainStatr.mp3" id="7_lhvlm"]
+[ext_resource type="AudioStream" uid="uid://bn3nrm3t6a1ir" path="res://Assets/InsideTrain.mp3" id="8_axjgs"]
+[ext_resource type="AudioStream" uid="uid://bohdqnnobwofw" path="res://Assets/Sounds/TrainStop.mp3" id="9_f0iqa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_koa3p"]
+line_spacing = 9.445
+font_size = 25
+outline_size = 5
 
 [node name="AudioManager" type="Node2D"]
-script = ExtResource("1_dhnm3")
+script = ExtResource("1_jbq8g")
 
 [node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_kohrm")
+stream = ExtResource("2_1wal4")
+volume_db = 1.0
+bus = &"Music"
+
+[node name="Act2Player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_38b8e")
+volume_db = 1.0
+bus = &"Music"
+
+[node name="Act3Player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_a2t7h")
+volume_db = 1.0
+bus = &"Music"
+
+[node name="Act4Player" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_4eo8g")
 volume_db = 1.0
 bus = &"Music"
 
@@ -16,19 +42,36 @@ bus = &"Music"
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Sprite-0001" type="Sprite2D" parent="UI"]
-position = Vector2(614, 494)
-scale = Vector2(0.82, 0.683333)
-texture = ExtResource("3_aj6wf")
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+visible = false
+position = Vector2(608, 496)
+scale = Vector2(0.433008, 0.307456)
+texture = ExtResource("6_rcv1u")
 
 [node name="SubtitleLabel" type="Label" parent="UI"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 303.0
-offset_top = 386.0
-offset_right = 914.0
-offset_bottom = 601.0
+anchors_preset = -1
+anchor_left = -0.10866
+anchor_right = 0.102124
+offset_left = 316.0
+offset_top = 392.0
+offset_right = 927.0
+offset_bottom = 607.0
 text = "gggggggggg"
+label_settings = SubResource("LabelSettings_koa3p")
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 metadata/_edit_use_anchors_ = true
+
+[node name="StartTrain" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_lhvlm")
+bus = &"SFX"
+
+[node name="InsideTrain" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_axjgs")
+bus = &"SFX"
+
+[node name="StopTrain" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_f0iqa")
+bus = &"SFX"

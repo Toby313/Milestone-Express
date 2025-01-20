@@ -1,7 +1,5 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbwb3iqclcde1"]
+[gd_scene load_steps=3 format=3 uid="uid://bbwb3iqclcde1"]
 
-[ext_resource type="Texture2D" uid="uid://4kky2803q6f8" path="res://Raw Sprites/MiddleLayer.png" id="1_x6f32"]
-[ext_resource type="Texture2D" uid="uid://byfled1uprxdq" path="res://ArrivaAnimation-Sheet.png" id="2_gkfcf"]
 [ext_resource type="Script" path="res://InsideTrain.cs" id="3_6kskg"]
 [ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="4_0wdkc"]
 
@@ -10,12 +8,10 @@
 [node name="MiddleLayer" type="Sprite2D" parent="."]
 position = Vector2(610, 476)
 scale = Vector2(4, 1)
-texture = ExtResource("1_x6f32")
 
 [node name="ArrivaAnimation-sheet" type="Sprite2D" parent="."]
 position = Vector2(8630, 109)
 scale = Vector2(11.7871, 24.4167)
-texture = ExtResource("2_gkfcf")
 script = ExtResource("3_6kskg")
 
 [node name="Scene_Transition" parent="ArrivaAnimation-sheet" instance=ExtResource("4_0wdkc")]

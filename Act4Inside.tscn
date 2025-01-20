@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmixhrnd4s16o"]
+
+[ext_resource type="Script" path="res://Act4Inside.cs" id="1_iixlw"]
+[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="1_j5wjt"]
+
+[node name="Act4Inside" type="Node2D"]
+script = ExtResource("1_iixlw")
+
+[node name="Scene_Transition" parent="." instance=ExtResource("1_j5wjt")]

@@ -1,0 +1,119 @@
+[gd_scene load_steps=12 format=3 uid="uid://44hsx7iusbgu"]
+
+[ext_resource type="Script" path="res://StainedLevel3.cs" id="1_0osgj"]
+[ext_resource type="Texture2D" uid="uid://b37pw81v8ty14" path="res://Blue_Sky.png" id="3_meour"]
+[ext_resource type="Texture2D" uid="uid://v0rs0e0aobro" path="res://Door_Handle.png" id="4_m7sfx"]
+[ext_resource type="Texture2D" uid="uid://cxl2qngl3ts2t" path="res://StainedSkater - Copy-sheet - Copy-sheet.png" id="5_1kobg"]
+[ext_resource type="Texture2D" uid="uid://ckak8dmoipbq0" path="res://ConfirmButton.png" id="5_nk43x"]
+[ext_resource type="Texture2D" uid="uid://vec38w35lhjl" path="res://DetailedGold.png" id="6_8ol0a"]
+[ext_resource type="Texture2D" uid="uid://bcxdatipfkuyh" path="res://DetailedGreen.png" id="7_miy3w"]
+[ext_resource type="Texture2D" uid="uid://cwf1pv6fw7g6x" path="res://DetailedBlue.png" id="8_i1k1o"]
+[ext_resource type="Texture2D" uid="uid://jn6ddyh1c5sw" path="res://DetailedLightBrown.png" id="9_doru4"]
+[ext_resource type="Texture2D" uid="uid://bu7dofi5fx5cs" path="res://DetailedBrown.png" id="10_mfw5r"]
+[ext_resource type="Texture2D" uid="uid://b8el6bqb71v8g" path="res://Raw Sprites/TableBackground.png" id="12_7jrxy"]
+
+[node name="StainedGlassLvl3" type="Node2D"]
+script = ExtResource("1_0osgj")
+
+[node name="Sprite1" type="Sprite2D" parent="."]
+position = Vector2(588, 288)
+scale = Vector2(0.858333, 1.095)
+texture = ExtResource("3_meour")
+
+[node name="Sprite2" type="Sprite2D" parent="."]
+position = Vector2(550.188, 289)
+scale = Vector2(0.107917, 0.286667)
+texture = ExtResource("3_meour")
+
+[node name="Sprite2" type="Sprite2D" parent="Sprite2"]
+position = Vector2(658.35, 2.0557)
+scale = Vector2(0.941131, 0.967191)
+texture = ExtResource("3_meour")
+
+[node name="Sprite3" type="Sprite2D" parent="."]
+position = Vector2(583, 297)
+texture = ExtResource("4_m7sfx")
+
+[node name="Stained_glass_board" type="Sprite2D" parent="."]
+position = Vector2(593, 270)
+scale = Vector2(0.893, 0.893)
+texture = ExtResource("5_1kobg")
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -6
+position = Vector2(3398, 817.36)
+scale = Vector2(43.5664, 28.184)
+texture = ExtResource("12_7jrxy")
+
+[node name="ConfirmButton" type="Button" parent="."]
+offset_left = 870.0
+offset_top = 162.0
+offset_right = 1060.0
+offset_bottom = 352.0
+flat = true
+
+[node name="Confirm" type="Sprite2D" parent="ConfirmButton"]
+position = Vector2(99, 98)
+scale = Vector2(0.693333, 0.643333)
+texture = ExtResource("5_nk43x")
+
+[node name="ButtonRed" type="Button" parent="."]
+z_index = 1
+offset_left = 92.0
+offset_top = 82.0
+offset_right = 214.0
+offset_bottom = 163.0
+flat = true
+
+[node name="Red" type="Sprite2D" parent="ButtonRed"]
+position = Vector2(68, 26)
+scale = Vector2(0.563917, 0.352667)
+texture = ExtResource("6_8ol0a")
+
+[node name="ButtonGreen" type="Button" parent="."]
+offset_left = 220.0
+offset_top = 156.0
+offset_right = 346.0
+offset_bottom = 234.0
+flat = true
+
+[node name="Green" type="Sprite2D" parent="ButtonGreen"]
+position = Vector2(67, 32)
+scale = Vector2(0.515667, 0.334833)
+texture = ExtResource("7_miy3w")
+
+[node name="ButtonBlue" type="Button" parent="."]
+offset_left = 37.0
+offset_top = 190.0
+offset_right = 161.0
+offset_bottom = 266.0
+flat = true
+
+[node name="Blue" type="Sprite2D" parent="ButtonBlue"]
+position = Vector2(67, 29)
+scale = Vector2(0.47825, 0.288083)
+texture = ExtResource("8_i1k1o")
+
+[node name="ButtonYellow" type="Button" parent="."]
+offset_left = 199.0
+offset_top = 261.0
+offset_right = 328.0
+offset_bottom = 342.0
+flat = true
+
+[node name="Yellow" type="Sprite2D" parent="ButtonYellow"]
+position = Vector2(73, 32)
+scale = Vector2(0.544, 0.32125)
+texture = ExtResource("9_doru4")
+
+[node name="ButtonMagenta" type="Button" parent="."]
+offset_left = 68.0
+offset_top = 340.0
+offset_right = 195.0
+offset_bottom = 420.0
+flat = true
+
+[node name="Brown" type="Sprite2D" parent="ButtonMagenta"]
+position = Vector2(66, 33)
+scale = Vector2(0.503583, 0.34725)
+texture = ExtResource("10_mfw5r")

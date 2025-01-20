@@ -29,6 +29,8 @@ public partial class InsideTrain : Node
 		GD.Print("Playing fade_Out animation.");
         Scene_Transition.Play("Fade_Out");
 
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.PlayInsideTrain();
     }
 
     private void OnMainTimerTimeout()
@@ -53,6 +55,9 @@ public partial class InsideTrain : Node
         oneSecondTimer.OneShot = true;
         oneSecondTimer.Timeout += TransitionToNextScene;
         oneSecondTimer.Start();
+        
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StopInsideTrain();
     }
 
     private void TransitionToNextScene()
