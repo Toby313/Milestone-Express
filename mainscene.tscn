@@ -51,27 +51,27 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7f6j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_20nvj"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t4qq0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j222o"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oejan"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_25q3a"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8lm0j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_71viv"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gaje3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uppbl"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(64, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_630tn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx46c"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(80, 0, 16, 16)
 
@@ -79,22 +79,22 @@ region = Rect2(80, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n7f6j")
+"texture": SubResource("AtlasTexture_20nvj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t4qq0")
+"texture": SubResource("AtlasTexture_j222o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oejan")
+"texture": SubResource("AtlasTexture_25q3a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8lm0j")
+"texture": SubResource("AtlasTexture_71viv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gaje3")
+"texture": SubResource("AtlasTexture_uppbl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_630tn")
+"texture": SubResource("AtlasTexture_dx46c")
 }],
 "loop": true,
 "name": &"BirdFlying",
