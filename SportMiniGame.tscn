@@ -1,31 +1,411 @@
-[gd_scene format=3 uid="uid://b10pi1qqwevhg"]
+[gd_scene load_steps=46 format=3 uid="uid://b10pi1qqwevhg"]
+
+[ext_resource type="Texture2D" uid="uid://c7wwu0j34ekde" path="res://Everything for Sports Game/Mini game gym.png" id="1_iud4e"]
+[ext_resource type="Script" path="res://main_character.gd" id="2_pp0uw"]
+[ext_resource type="Texture2D" uid="uid://dcwgks130qk77" path="res://Everything for Sports Game/main character cycle-Sheet-export.png" id="3_e1sgg"]
+[ext_resource type="Texture2D" uid="uid://cmge2ot8ecvvv" path="res://Everything for Sports Game/korfball goal-export.png" id="4_euwer"]
+[ext_resource type="Texture2D" uid="uid://bgjkavhyv11tk" path="res://Everything for Sports Game/Lacrosse stick.png" id="5_aaifw"]
+[ext_resource type="Texture2D" uid="uid://dijxvqxcyvhs3" path="res://Everything for Sports Game/Hockey stick.png" id="6_hdbfx"]
+[ext_resource type="Texture2D" uid="uid://bbte0qrhg30fy" path="res://Everything for Sports Game/Korfball ball.png" id="7_wfgdu"]
+[ext_resource type="Texture2D" uid="uid://hxcbvd6d7kmi" path="res://Everything for Sports Game/Hockey ball.png" id="8_gvjfx"]
+[ext_resource type="Texture2D" uid="uid://co1qgnh8kmn28" path="res://Everything for Sports Game/Lacrosse ball.png" id="9_t1jqb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_01r5f"]
+size = Vector2(29, 14)
+
+[sub_resource type="Animation" id="Animation_88maf"]
+resource_name = "Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_hl4eg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2i(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_81tds"]
+resource_name = "Walking down"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(0, 0), Vector2i(1, 0), Vector2i(2, 0), Vector2i(3, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r8a0a"]
+resource_name = "Walking up"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(4, 0), Vector2i(5, 0), Vector2i(6, 0), Vector2i(7, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dl1bd"]
+resource_name = "walking left"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(12, 0), Vector2i(13, 0), Vector2i(14, 0), Vector2i(15, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_c8o5r"]
+resource_name = "walking right"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame_coords")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.433333, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2i(8, 0), Vector2i(9, 0), Vector2i(10, 0), Vector2i(11, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jeu44"]
+_data = {
+"Idle": SubResource("Animation_88maf"),
+"RESET": SubResource("Animation_hl4eg"),
+"Walking down": SubResource("Animation_81tds"),
+"Walking up": SubResource("Animation_r8a0a"),
+"walking left": SubResource("Animation_dl1bd"),
+"walking right": SubResource("Animation_c8o5r")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8pgsn"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_eyst5"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_8pgsn")
+blend_point_0/pos = Vector2(0, 0)
+blend_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yc1jf"]
+animation = &"Walking down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2dhha"]
+animation = &"Walking up"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_24ba7"]
+animation = &"walking right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_glaba"]
+animation = &"walking left"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_vabsk"]
+blend_point_0/node = SubResource("AnimationNodeAnimation_yc1jf")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_1/node = SubResource("AnimationNodeAnimation_2dhha")
+blend_point_1/pos = Vector2(0, -1)
+blend_point_2/node = SubResource("AnimationNodeAnimation_24ba7")
+blend_point_2/pos = Vector2(1, 0)
+blend_point_3/node = SubResource("AnimationNodeAnimation_glaba")
+blend_point_3/pos = Vector2(-1, 0)
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bdvbj"]
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_eyst5")
+states/Idle/position = Vector2(357, 100)
+states/Walking/node = SubResource("AnimationNodeBlendSpace2D_vabsk")
+states/Walking/position = Vector2(542, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwjcc"]
+size = Vector2(61, 500.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ips6q"]
+size = Vector2(1239, 55.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlbje"]
+size = Vector2(101, 494)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d17om"]
+size = Vector2(1262.25, 89)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8tr8h"]
+size = Vector2(10, 106)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q6f1a"]
+radius = 13.0
+height = 26.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4u6vv"]
+radius = 11.0
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3kpef"]
+a = Vector2(-1, -5)
+b = Vector2(-29, 23)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xrtw4"]
+a = Vector2(-3.33334, -12.6667)
+b = Vector2(-23.3333, 16)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_q0w0m"]
+a = Vector2(-5.33333, -1.33334)
+b = Vector2(5.33333, 3.33334)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_swl8w"]
+friction = 0.0
+bounce = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u1nom"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iien1"]
+radius = 5.09902
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t6dc7"]
+friction = 0.0
+bounce = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1gdgm"]
+radius = 4.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gm75v"]
+radius = 4.47214
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe5xc"]
+size = Vector2(20, 40)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cknw7"]
+friction = 0.0
+bounce = 10.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pk0c1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vtbui"]
+radius = 11.0
 
 [node name="SportMiniGame" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+texture_filter = 1
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 1224.0
+offset_bottom = 548.0
+texture = ExtResource("1_iud4e")
 
-[node name="Player" type="CharacterBody2D" parent="."]
+[node name="Main Character" type="CharacterBody2D" parent="." node_paths=PackedStringArray("animation_tree")]
+top_level = true
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("2_pp0uw")
+animation_tree = NodePath("AnimationTree")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main Character"]
+position = Vector2(614.5, 326)
+shape = SubResource("RectangleShape2D_01r5f")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Main Character"]
+libraries = {
+"": SubResource("AnimationLibrary_jeu44")
+}
+
+[node name="AnimationTree" type="AnimationTree" parent="Main Character"]
+tree_root = SubResource("AnimationNodeStateMachine_bdvbj")
+anim_player = NodePath("../AnimationPlayer")
+parameters/Idle/blend_position = Vector2(0, 0)
+parameters/Walking/blend_position = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Main Character"]
+position = Vector2(615, 293)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_e1sgg")
+hframes = 16
 
 [node name="RightWall" type="CharacterBody2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(1254.5, 297.75)
+shape = SubResource("RectangleShape2D_hwjcc")
+
 [node name="Floor" type="CharacterBody2D" parent="."]
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(619.5, 575.25)
+shape = SubResource("RectangleShape2D_ips6q")
+
 [node name="LeftWall" type="CharacterBody2D" parent="."]
+position = Vector2(75, 99)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(-122, 206)
+shape = SubResource("RectangleShape2D_tlbje")
 
 [node name="Roof" type="CharacterBody2D" parent="."]
+position = Vector2(-29, 138)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Roof"]
+position = Vector2(651.125, -117)
+shape = SubResource("RectangleShape2D_d17om")
 
 [node name="KorfBallGoal" type="CharacterBody2D" parent="."]
+position = Vector2(180, 251)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KorfBallGoal"]
+position = Vector2(-101, -58)
+shape = SubResource("RectangleShape2D_8tr8h")
+
+[node name="Sprite2D" type="Sprite2D" parent="KorfBallGoal"]
+texture_filter = 1
+position = Vector2(-90, -69)
+scale = Vector2(2, 2)
+texture = ExtResource("4_euwer")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="KorfBallGoal"]
+position = Vector2(-85, -113)
+shape = SubResource("CapsuleShape2D_q6f1a")
 
 [node name="LacroseStick" type="CharacterBody2D" parent="."]
+position = Vector2(89, 339)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LacroseStick"]
+position = Vector2(6, -12)
+shape = SubResource("CircleShape2D_4u6vv")
+
+[node name="Sprite2D" type="Sprite2D" parent="LacroseStick"]
+position = Vector2(-8, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("5_aaifw")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LacroseStick"]
+shape = SubResource("SegmentShape2D_3kpef")
 
 [node name="HockeyStick" type="CharacterBody2D" parent="."]
+position = Vector2(117, 318)
 
-[node name="KorfBall" type="RigidBody2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HockeyStick"]
+position = Vector2(-10, 139)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("SegmentShape2D_xrtw4")
+
+[node name="Sprite2D" type="Sprite2D" parent="HockeyStick"]
+position = Vector2(-37, 143)
+scale = Vector2(2, 2)
+texture = ExtResource("6_hdbfx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HockeyStick"]
+position = Vector2(-53, 158)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("SegmentShape2D_q0w0m")
 
 [node name="HockeyBall" type="RigidBody2D" parent="."]
+position = Vector2(328, 331)
+physics_material_override = SubResource("PhysicsMaterial_swl8w")
+gravity_scale = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HockeyBall"]
+position = Vector2(806, -71)
+shape = SubResource("CircleShape2D_u1nom")
+
+[node name="Sprite2D" type="Sprite2D" parent="HockeyBall"]
+texture_filter = 1
+position = Vector2(806, -71)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("8_gvjfx")
+
+[node name="Area2D" type="Area2D" parent="HockeyBall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HockeyBall/Area2D"]
+position = Vector2(806, -71)
+shape = SubResource("CircleShape2D_iien1")
 
 [node name="LacrosseBall" type="RigidBody2D" parent="."]
+position = Vector2(39, -15)
+physics_material_override = SubResource("PhysicsMaterial_t6dc7")
+gravity_scale = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LacrosseBall"]
+position = Vector2(874, 158)
+shape = SubResource("CircleShape2D_1gdgm")
+
+[node name="Sprite2D" type="Sprite2D" parent="LacrosseBall"]
+texture_filter = 1
+position = Vector2(874, 158)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("9_t1jqb")
+
+[node name="Area2D" type="Area2D" parent="LacrosseBall"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LacrosseBall/Area2D"]
+position = Vector2(874, 158)
+shape = SubResource("CircleShape2D_gm75v")
 
 [node name="WinArea" type="Area2D" parent="."]
+position = Vector2(56, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea"]
+position = Vector2(39, 184)
+shape = SubResource("RectangleShape2D_xe5xc")
+disabled = true
+
+[node name="KorfBall" type="RigidBody2D" parent="."]
+position = Vector2(51, 43)
+input_pickable = true
+physics_material_override = SubResource("PhysicsMaterial_cknw7")
+gravity_scale = 0.1
+angular_velocity = 0.174533
+angular_damp = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KorfBall"]
+position = Vector2(1034, 456)
+shape = SubResource("CircleShape2D_pk0c1")
+
+[node name="Sprite2D" type="Sprite2D" parent="KorfBall"]
+texture_filter = 1
+position = Vector2(1034, 456)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("7_wfgdu")
+
+[node name="Area2D" type="Area2D" parent="KorfBall"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KorfBall/Area2D"]
+position = Vector2(1034, 456)
+shape = SubResource("CircleShape2D_vtbui")
