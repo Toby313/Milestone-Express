@@ -3,31 +3,58 @@ using System;
 
 public partial class MinigameController : Node2D
 {
-	private float beatInterval = 0.67f; // Time between beats in seconds (optional for sound/visual sync)
+	private float beatInterval = 0.67f; // Time between beats in seconds
 	private float timeSinceLastBeat = 0f; // Tracks time since the last beat
 	private float hitCooldown = 0.5f;   // Cooldown between player inputs
 	private float timeSinceLastHit = 0f; // Tracks time since the last hit
 
-	private int score = 0;            // Player's total score
-	private Label FeedbackLabel;      // Feedback for "Perfect", "Good", etc.
+	private int score = 0;              // Player's total score
+	private Label FeedbackLabel;        // Feedback for "Perfect", "Good", etc.
 	private AudioStreamPlayer AnvilSound; // Plays the anvil sound
+	private Button RestartButton;       // Restart game button
+	private Button ContinueButton;      // Continue button (only for high scores)
 	private float gameTimeRemaining = 10.0f; // Game duration in seconds
-	private bool isGameOver = false; // Tracks if the game has ended
+	private bool isGameOver = false;    // Tracks if the game has ended
+	private bool isGameStarted = false; // Tracks if the game has started
 
 	public override void _Ready()
 	{
 		// Get UI elements
 		FeedbackLabel = GetNode<Label>("FeedbackLabel");
 		AnvilSound = GetNode<AudioStreamPlayer>("AnvilSound");
+		RestartButton = GetNode<Button>("RestartButton");
+		ContinueButton = GetNode<Button>("ContinueButton");
+
+		// Hide buttons at the start
+		RestartButton.Visible = false;
+		ContinueButton.Visible = false;
+
+		// Display a message to start the game
+		FeedbackLabel.Text = "Klik op\nde maat!";
+
+		// Connect buttons
+		RestartButton.Connect("pressed", new Callable(this, "OnRestartPressed"));
+		ContinueButton.Connect("pressed", new Callable(this, "OnContinuePressed"));
 	}
 
 	public override void _Process(double delta)
 	{
 		if (isGameOver) return;
-	
+
+		if (!isGameStarted)
+		{
+			// Start the game when the player presses the "hammer_strike" button
+			if (Input.IsActionJustPressed("hammer_strike"))
+			{
+				isGameStarted = true;
+				FeedbackLabel.Text = ""; // Clear the start message
+			}
+			return; // Do not run game logic until the game has started
+		}
+
 		// Reduce the remaining game time
 		gameTimeRemaining -= (float)delta;
-	
+
 		// Check if the time is up
 		if (gameTimeRemaining <= 0)
 		{
@@ -53,6 +80,7 @@ public partial class MinigameController : Node2D
 			timeSinceLastHit = 0f; // Reset cooldown timer
 		}
 	}
+
 	private void CheckTiming()
 	{
 		float timingError = Math.Abs(timeSinceLastBeat - beatInterval / 2); // How far off they are
@@ -64,18 +92,47 @@ public partial class MinigameController : Node2D
 		}
 		else if (timingError <= 0.1f) // Good hit
 		{
-			FeedbackLabel.Text = "Good!";
+			FeedbackLabel.Text = "Goed!";
 			score += 50;
 		}
 		else // Miss
 		{
-			FeedbackLabel.Text = "Miss!";
+			FeedbackLabel.Text = "Mis!";
 		}
 	}
 
 	private void EndGame()
 	{
 		isGameOver = true; // Stop gameplay logic
-		FeedbackLabel.Text = $"Game Over! Final Score: {score}";
+		FeedbackLabel.Text = $"Score:\n{score}";
+
+		// Check if the score is 1000 or more
+		if (score >= 1000)
+		{
+			ContinueButton.Visible = true;
+		}
+
+		RestartButton.Visible = true;
+	}
+
+	private void OnRestartPressed()
+	{
+		// Reset game state
+		isGameOver = false;
+		isGameStarted = false;
+		score = 0;
+		gameTimeRemaining = 10.0f;
+		timeSinceLastBeat = 0f;
+		timeSinceLastHit = 0f;
+
+		// Hide buttons and reset UI
+		RestartButton.Visible = false;
+		ContinueButton.Visible = false;
+		FeedbackLabel.Text = "Klik op\nde maat!";
+	}
+
+	private void OnContinuePressed()
+	{
+		// Placeholder for transitioning to the next scene
 	}
 }

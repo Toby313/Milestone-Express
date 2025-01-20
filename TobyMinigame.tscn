@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://6w11ysyafjca"]
+[gd_scene load_steps=5 format=3 uid="uid://6w11ysyafjca"]
 
 [ext_resource type="Texture2D" uid="uid://d1xtvcfiy2ohs" path="res://Sprites/TobyMinigame/Background.png" id="1_3n6q6"]
-[ext_resource type="Texture2D" uid="uid://dar5a6o5ugtxr" path="res://Sprites/TobyMinigame/Anvil.png" id="2_1pgft"]
 [ext_resource type="Script" path="res://MinigameController.cs" id="3_ta5id"]
 [ext_resource type="FontFile" uid="uid://bwif1fl61g738" path="res://PixelFont.ttf" id="4_nxrlh"]
 [ext_resource type="AudioStream" uid="uid://bkmrffnmnim70" path="res://AnvilHit.wav" id="5_hea0j"]
@@ -14,9 +13,6 @@ zoom = Vector2(8, 8)
 [node name="Background" type="Sprite2D" parent="."]
 texture = ExtResource("1_3n6q6")
 
-[node name="Anvil" type="Sprite2D" parent="."]
-texture = ExtResource("2_1pgft")
-
 [node name="Hammer" type="Sprite2D" parent="."]
 
 [node name="CircleController" type="Node2D" parent="."]
@@ -27,12 +23,12 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -43.0
-offset_top = -20.0
+offset_top = -5.0
 offset_right = 174.0
-offset_bottom = -3.0
+offset_bottom = 28.0
 grow_horizontal = 2
 scale = Vector2(0.4, 0.4)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_nxrlh")
 text = "
 "
@@ -44,3 +40,42 @@ stream = ExtResource("5_hea0j")
 [node name="GameTimer" type="Timer" parent="CircleController"]
 wait_time = 10.0
 one_shot = true
+
+[node name="RestartButton" type="Button" parent="CircleController"]
+offset_left = -38.0
+offset_top = 23.0
+offset_right = 30.0
+offset_bottom = 48.0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/font = ExtResource("4_nxrlh")
+text = "Restart"
+
+[node name="ContinueButton" type="Button" parent="CircleController"]
+offset_left = 9.0
+offset_top = 23.0
+offset_right = 77.0
+offset_bottom = 48.0
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/font = ExtResource("4_nxrlh")
+text = "Verder"
+
+[node name="Hint" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -68.0
+offset_top = -21.0
+offset_right = 89.0
+offset_bottom = 53.0
+grow_horizontal = 2
+scale = Vector2(0.4, 0.4)
+theme_override_colors/font_color = Color(0.160784, 0.133333, 0.129412, 1)
+theme_override_fonts/font = ExtResource("4_nxrlh")
+text = "
+Haal 1000
+punten!
+"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="CircleController/RestartButton" to="CircleController" method="_on_restart_button_pressed"]
+[connection signal="pressed" from="CircleController/ContinueButton" to="CircleController" method="_on_continue_button_pressed"]
