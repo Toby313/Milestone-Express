@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://t2q4ps7xj0ux"]
+[gd_scene load_steps=11 format=3 uid="uid://cnbyqvlsexq6b"]
 
 [ext_resource type="Script" path="res://AudioManager.cs" id="1_jbq8g"]
 [ext_resource type="AudioStream" uid="uid://be8m5xmknjwh0" path="res://Assets/Sounds/ProtoVoiceOver.mp3" id="2_1wal4"]

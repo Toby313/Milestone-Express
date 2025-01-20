@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://sa30r756n1qi" path="res://Sprites/Background Layers/GrassLayer2.png" id="9_xuaf8"]
 [ext_resource type="Texture2D" uid="uid://blqlx3kmvogyi" path="res://Sprites/Windmill-Sheet.png" id="10_rrbou"]
 [ext_resource type="Texture2D" uid="uid://d2p5hsuae6mjo" path="res://Sprites/Background Layers/GrassLayer1.png" id="11_ttfjb"]
-[ext_resource type="Texture2D" uid="uid://wjl1cuwt0dem" path="res://Sprites/Train_Station_version1.png" id="12_4a4n8"]
+[ext_resource type="Texture2D" uid="uid://wjl1cuwt0dem" path="res://Sprites/TrainStation.png" id="12_4a4n8"]
 [ext_resource type="Texture2D" uid="uid://c4eit5cjsheer" path="res://smaller cow.png" id="12_ln4rr"]
 [ext_resource type="Texture2D" uid="uid://q7548djipyia" path="res://Sprites/Background Layers/BarbedFenceLayer.png" id="13_0r4g1"]
 [ext_resource type="Texture2D" uid="uid://cyjerctlf03cw" path="res://Fatter Sheep.png" id="14_axl3n"]

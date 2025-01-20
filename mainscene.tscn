@@ -284,7 +284,7 @@ repeat_times = 50
 texture = ExtResource("3_gvhbx")
 centered = false
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="Node/Parallax2D7"]
+[node name="Windmill" type="AnimatedSprite2D" parent="Node/Parallax2D7"]
 position = Vector2(50, 0)
 sprite_frames = SubResource("SpriteFrames_pb62b")
 autoplay = "default"
