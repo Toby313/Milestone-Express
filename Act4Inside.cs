@@ -11,7 +11,7 @@ public partial class Act4Inside : Node2D
     {
         transitionTimer = new Timer();
         AddChild(transitionTimer);
-        transitionTimer.WaitTime = 14.0f; // 14-second timer
+        transitionTimer.WaitTime = 27.0f; // 14-second timer
         transitionTimer.OneShot = true;
         transitionTimer.Timeout += OnMainTimerTimeout;
         transitionTimer.Start();

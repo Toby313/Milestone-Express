@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://u0qytjn8wti5"]
+
+[ext_resource type="Texture2D" uid="uid://ccsj5gmqlxsg8" path="res://map.png" id="1_p7pfo"]
+[ext_resource type="Script" path="res://ButtonController.cs" id="2_rnw7s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bdjnb"]
+font_size = 161
+outline_size = 110
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lmnfq"]
+font_size = 81
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_s4q4a"]
+font_size = 60
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="End" type="Node2D"]
+
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(612.5, 269.5)
+scale = Vector2(4.27303, 4.97656)
+texture = ExtResource("1_p7pfo")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1242.0
+offset_bottom = 549.0
+text = "The End"
+label_settings = SubResource("LabelSettings_bdjnb")
+horizontal_alignment = 1
+
+[node name="ButtonController" type="Node2D" parent="."]
+position = Vector2(656, 343)
+script = ExtResource("2_rnw7s")
+
+[node name="Stop" type="Button" parent="ButtonController"]
+offset_right = 274.0
+offset_bottom = 125.0
+flat = true
+
+[node name="Label" type="Label" parent="ButtonController/Stop"]
+layout_mode = 0
+offset_right = 274.0
+offset_bottom = 131.0
+text = "Stop
+"
+label_settings = SubResource("LabelSettings_lmnfq")
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="ButtonController"]
+offset_left = -331.0
+offset_top = 1.0
+offset_right = -57.0
+offset_bottom = 126.0
+flat = true
+
+[node name="Label" type="Label" parent="ButtonController/Restart"]
+layout_mode = 0
+offset_top = -9.0
+offset_right = 273.0
+offset_bottom = 125.0
+text = "Herstart"
+label_settings = SubResource("LabelSettings_s4q4a")
+horizontal_alignment = 1
+vertical_alignment = 1

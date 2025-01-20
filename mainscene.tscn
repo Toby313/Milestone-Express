@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="6_unctp"]
 [ext_resource type="Texture2D" uid="uid://cyjerctlf03cw" path="res://Fatter Sheep.png" id="8_ty1ip"]
 [ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="9_xgww2"]
-[ext_resource type="PackedScene" path="res://scene_transition.tscn" id="11_658ue"]
+[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="11_658ue"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7f6j"]
 atlas = ExtResource("9_xgww2")
