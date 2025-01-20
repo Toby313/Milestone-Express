@@ -36,6 +36,9 @@ public partial class Act3ToStation : Camera2D
 		GD.Print("Playing fade_Out animation.");
         Scene_Transition.Play("Fade_Out");
 
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StartStopTrain();
+
     }
 
     public override void _Process(double delta)
@@ -119,6 +122,9 @@ public partial class Act3ToStation : Camera2D
         {
             Scene_Transition.Play("Fade_In1");
         }
+
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StopStopTrain();
     }
 
     private void OnTransitionTimerTimeout()
@@ -128,7 +134,7 @@ public partial class Act3ToStation : Camera2D
 
     private void TransitionToNextScene()
     {
-        var nextScenePath = "res://ExploringMiniGame.tscn"; // Path to the next scene
+        var nextScenePath = "res://TobyMinigame.tscn"; // Path to the next scene
         var nextScene = (PackedScene)ResourceLoader.Load(nextScenePath);
         if (nextScene != null)
         {

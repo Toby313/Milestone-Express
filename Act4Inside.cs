@@ -29,6 +29,9 @@ public partial class Act4Inside : Node2D
 		GD.Print("Playing fade_Out animation.");
         Scene_Transition.Play("Fade_Out");
 
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.PlayInsideTrain();
+
     }
 
     private void OnMainTimerTimeout()
@@ -68,6 +71,9 @@ public partial class Act4Inside : Node2D
         {
             GD.PrintErr("Failed to load the next scene.");
         }
+
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StopInsideTrain();
     }
 }
 

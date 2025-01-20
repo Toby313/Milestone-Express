@@ -1,3 +1,31 @@
 [gd_scene format=3 uid="uid://b10pi1qqwevhg"]
 
 [node name="SportMiniGame" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="RightWall" type="CharacterBody2D" parent="."]
+
+[node name="Floor" type="CharacterBody2D" parent="."]
+
+[node name="LeftWall" type="CharacterBody2D" parent="."]
+
+[node name="Roof" type="CharacterBody2D" parent="."]
+
+[node name="KorfBallGoal" type="CharacterBody2D" parent="."]
+
+[node name="LacroseStick" type="CharacterBody2D" parent="."]
+
+[node name="HockeyStick" type="CharacterBody2D" parent="."]
+
+[node name="KorfBall" type="RigidBody2D" parent="."]
+
+[node name="HockeyBall" type="RigidBody2D" parent="."]
+
+[node name="LacrosseBall" type="RigidBody2D" parent="."]
+
+[node name="WinArea" type="Area2D" parent="."]

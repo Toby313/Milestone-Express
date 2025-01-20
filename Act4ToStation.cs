@@ -36,6 +36,9 @@ public partial class Act4ToStation : Camera2D
 		GD.Print("Playing fade_Out animation.");
         Scene_Transition.Play("Fade_Out");
 
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StartStopTrain();
+
     }
 
     public override void _Process(double delta)
@@ -119,6 +122,9 @@ public partial class Act4ToStation : Camera2D
         {
             Scene_Transition.Play("Fade_In1");
         }
+
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StopStopTrain();
     }
 
     private void OnTransitionTimerTimeout()

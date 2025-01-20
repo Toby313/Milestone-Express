@@ -34,6 +34,7 @@ public partial class Act3 : Camera2D
         }
 
         audioManager.StartAudioAct3();
+        audioManager.PlayStartTrain();
     }
 
     public void StartSceneTransition()
@@ -56,6 +57,9 @@ public partial class Act3 : Camera2D
 
         GD.Print("Starting scene transition with 1-second delay...");
         transitionTimer.Start(); // Start the transition timer
+
+        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+        audioManager.StopStartTrain();
     }
 
     private void OnTransitionTimerTimeout()

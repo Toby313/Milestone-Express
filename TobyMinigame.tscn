@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://6w11ysyafjca"]
+[gd_scene load_steps=5 format=3 uid="uid://od0hxdmit12d"]
 
 [ext_resource type="Texture2D" uid="uid://d1xtvcfiy2ohs" path="res://Sprites/TobyMinigame/Background.png" id="1_3n6q6"]
 [ext_resource type="Script" path="res://MinigameController.cs" id="3_ta5id"]

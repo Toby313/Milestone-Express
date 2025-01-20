@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7wloplf3p7mg"
-path="res://.godot/imported/interior free.png-90df9b77d3fc40744e3a136ef1a83879.ctex"
+uid="uid://bmdq7rkuanajk"
+path="res://.godot/imported/Mini game gym.png-db1b909d5030d74b6ef4bcf131589403.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://interior free/interior free.png"
-dest_files=["res://.godot/imported/interior free.png-90df9b77d3fc40744e3a136ef1a83879.ctex"]
+source_file="res://Assets/Mini game gym.png"
+dest_files=["res://.godot/imported/Mini game gym.png-db1b909d5030d74b6ef4bcf131589403.ctex"]
 
 [params]
 
