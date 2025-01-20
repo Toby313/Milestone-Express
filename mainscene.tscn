@@ -1,39 +1,77 @@
-[gd_scene load_steps=38 format=3 uid="uid://dl3xov5wp10wb"]
+[gd_scene load_steps=46 format=3 uid="uid://dl3xov5wp10wb"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_08gkf"]
-[ext_resource type="Texture2D" uid="uid://dpkvdis6jlcks" path="res://Sprites/Background Objects/Crossing.png" id="1_nw4a3"]
-[ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_0ee11"]
-[ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer1.png" id="3_8ujj5"]
-[ext_resource type="Texture2D" uid="uid://bsb8b58y2n1wh" path="res://Sprites/Background Layers/BackgroundLayer2.png" id="3_oslpj"]
+[ext_resource type="Texture2D" uid="uid://dhl0rkfcbyevv" path="res://Sprites/Background Layers/GrassLayer3.png" id="2_1ces4"]
+[ext_resource type="Texture2D" uid="uid://sa30r756n1qi" path="res://Sprites/Background Layers/GrassLayer2.png" id="3_gvhbx"]
+[ext_resource type="Texture2D" uid="uid://blqlx3kmvogyi" path="res://Sprites/Windmill-Sheet.png" id="3_r2vf1"]
 [ext_resource type="Script" path="res://Scripts/Cameramovement.cs" id="3_x3l7a"]
+[ext_resource type="Texture2D" uid="uid://d2p5hsuae6mjo" path="res://Sprites/Background Layers/GrassLayer1.png" id="4_lv2f7"]
 [ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="4_p3yig"]
-[ext_resource type="Texture2D" uid="uid://d0o13tj63lw08" path="res://Sprites/Background Layers/WoodFenceLayer.png" id="5_0pg62"]
+[ext_resource type="Texture2D" uid="uid://c4eit5cjsheer" path="res://smaller cow.png" id="5_74t57"]
 [ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="5_ayh2t"]
+[ext_resource type="Texture2D" uid="uid://q7548djipyia" path="res://Sprites/Background Layers/BarbedFenceLayer.png" id="5_q3l4l"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="6_unctp"]
+[ext_resource type="Texture2D" uid="uid://cyjerctlf03cw" path="res://Fatter Sheep.png" id="8_ty1ip"]
 [ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="9_xgww2"]
 [ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="11_658ue"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7f6j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrd4y"]
+atlas = ExtResource("3_r2vf1")
+region = Rect2(0, 0, 80, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtcwy"]
+atlas = ExtResource("3_r2vf1")
+region = Rect2(80, 0, 80, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp6ah"]
+atlas = ExtResource("3_r2vf1")
+region = Rect2(160, 0, 80, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r3c4"]
+atlas = ExtResource("3_r2vf1")
+region = Rect2(240, 0, 80, 76)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pb62b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrd4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtcwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp6ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r3c4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20nvj"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t4qq0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j222o"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oejan"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_25q3a"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8lm0j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_71viv"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gaje3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uppbl"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(64, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_630tn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx46c"]
 atlas = ExtResource("9_xgww2")
 region = Rect2(80, 0, 16, 16)
 
@@ -41,22 +79,22 @@ region = Rect2(80, 0, 16, 16)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n7f6j")
+"texture": SubResource("AtlasTexture_20nvj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t4qq0")
+"texture": SubResource("AtlasTexture_j222o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oejan")
+"texture": SubResource("AtlasTexture_25q3a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8lm0j")
+"texture": SubResource("AtlasTexture_71viv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gaje3")
+"texture": SubResource("AtlasTexture_uppbl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_630tn")
+"texture": SubResource("AtlasTexture_dx46c")
 }],
 "loop": true,
 "name": &"BirdFlying",
@@ -233,7 +271,7 @@ repeat_size = Vector2(584, 0)
 repeat_times = 52
 
 [node name="Background3" type="Sprite2D" parent="Node/Parallax2D2"]
-texture = ExtResource("2_0ee11")
+texture = ExtResource("2_1ces4")
 centered = false
 
 [node name="Parallax2D7" type="Parallax2D" parent="Node"]
@@ -243,8 +281,14 @@ repeat_size = Vector2(608, 0)
 repeat_times = 50
 
 [node name="Background2" type="Sprite2D" parent="Node/Parallax2D7"]
-texture = ExtResource("3_oslpj")
+texture = ExtResource("3_gvhbx")
 centered = false
+
+[node name="Windmill" type="AnimatedSprite2D" parent="Node/Parallax2D7"]
+position = Vector2(50, 0)
+sprite_frames = SubResource("SpriteFrames_pb62b")
+autoplay = "default"
+offset = Vector2(270, 39)
 
 [node name="Parallax2D3" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(0.55, 1)
@@ -252,8 +296,21 @@ repeat_size = Vector2(608, 0)
 repeat_times = 50
 
 [node name="Background1" type="Sprite2D" parent="Node/Parallax2D3"]
-texture = ExtResource("3_8ujj5")
+texture = ExtResource("4_lv2f7")
 centered = false
+
+[node name="Cows" type="Sprite2D" parent="Node/Parallax2D3"]
+texture = ExtResource("5_74t57")
+offset = Vector2(100, 65)
+
+[node name="Cows2" type="Sprite2D" parent="Node/Parallax2D3"]
+texture = ExtResource("5_74t57")
+offset = Vector2(330, 64)
+
+[node name="Cows3" type="Sprite2D" parent="Node/Parallax2D3"]
+texture = ExtResource("5_74t57")
+offset = Vector2(305, 66)
+flip_h = true
 
 [node name="Parallax2D4" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(0.7, 1)
@@ -261,7 +318,7 @@ repeat_size = Vector2(303, 0)
 repeat_times = 100
 
 [node name="Fence" type="Sprite2D" parent="Node/Parallax2D4"]
-texture = ExtResource("5_0pg62")
+texture = ExtResource("5_q3l4l")
 centered = false
 
 [node name="Parallax2D6" type="Parallax2D" parent="Node"]
@@ -274,7 +331,7 @@ centered = false
 
 [node name="Parallax2D5" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(1.3, 1)
-repeat_size = Vector2(306, 0)
+repeat_size = Vector2(1200, 0)
 repeat_times = 100
 
 [node name="Foreground" type="Sprite2D" parent="Node/Parallax2D5"]
@@ -282,6 +339,15 @@ visible = false
 z_index = 1
 texture = ExtResource("5_ayh2t")
 centered = false
+
+[node name="Sheep" type="Sprite2D" parent="Node/Parallax2D5"]
+texture = ExtResource("8_ty1ip")
+offset = Vector2(0, 127)
+
+[node name="Sheep2" type="Sprite2D" parent="Node/Parallax2D5"]
+texture = ExtResource("8_ty1ip")
+offset = Vector2(600, 127)
+flip_h = true
 
 [node name="Parallax2D8" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(0.7, 1)

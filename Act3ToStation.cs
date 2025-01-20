@@ -38,6 +38,7 @@ public partial class Act3ToStation : Camera2D
 
         AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
         audioManager.StartStopTrain();
+        audioManager.StopInsideTrain();
 
     }
 

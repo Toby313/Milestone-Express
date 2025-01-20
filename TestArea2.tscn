@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dv0wk0n5kssdt"]
+
+[ext_resource type="Texture2D" uid="uid://bavhectbp22cv" path="res://BlueBox.png" id="1_g2cim"]
+[ext_resource type="Script" path="res://PlayerMove.cs" id="1_tme28"]
+[ext_resource type="Texture2D" uid="uid://bu7dofi5fx5cs" path="res://DetailedBrown.png" id="2_efukv"]
+
+[node name="TestArea2" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(78, 163)
+script = ExtResource("1_tme28")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(107.25, 51.25)
+scale = Vector2(0.414, 0.354)
+texture = ExtResource("1_g2cim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+
+[node name="Area2D" type="Area2D" parent="Player"]
+
+[node name="Ball" type="RigidBody2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(-49, 106)
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball"]
+position = Vector2(393, 248)
+scale = Vector2(0.273333, 0.3)
+texture = ExtResource("2_efukv")
+
+[node name="Ball2" type="RigidBody2D" parent="."]
+position = Vector2(124, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ball2"]
+position = Vector2(393, 248)
+scale = Vector2(0.273333, 0.3)
+texture = ExtResource("2_efukv")
+
+[connection signal="body_entered" from="Player/Area2D" to="Player" method="_on_area_2d_body_entered"]

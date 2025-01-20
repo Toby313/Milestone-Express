@@ -1,9 +1,11 @@
-[gd_scene load_steps=38 format=3 uid="uid://bkjtf4qxnuktq"]
+[gd_scene load_steps=45 format=3 uid="uid://bkjtf4qxnuktq"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_kw8o3"]
 [ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_47tdr"]
 [ext_resource type="Texture2D" uid="uid://bsb8b58y2n1wh" path="res://Sprites/Background Layers/BackgroundLayer2.png" id="3_7wypm"]
-[ext_resource type="Texture2D" uid="uid://b57jltjsxxem5" path="res://Sprites/Background Layers/BackgroundLayer1.png" id="4_miqit"]
+[ext_resource type="Texture2D" uid="uid://blqlx3kmvogyi" path="res://Sprites/Windmill-Sheet.png" id="4_4v0wf"]
+[ext_resource type="Texture2D" uid="uid://cg5voxdoysyh5" path="res://Sprites/Background Layers/WheatHills.png" id="4_fss23"]
+[ext_resource type="Texture2D" uid="uid://cssofeypfyrht" path="res://Sprites/Background Layers/WheatEdge.png" id="5_7wa5t"]
 [ext_resource type="Texture2D" uid="uid://d0o13tj63lw08" path="res://Sprites/Background Layers/WoodFenceLayer.png" id="5_j607d"]
 [ext_resource type="Texture2D" uid="uid://batwqhucw7lqb" path="res://Sprites/Background Layers/MiddleLayer.png" id="6_lqjw8"]
 [ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="7_0o0by"]
@@ -11,6 +13,42 @@
 [ext_resource type="Script" path="res://Act3.cs" id="9_00pjj"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="10_3h5ss"]
 [ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="11_0pjir"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrd4y"]
+atlas = ExtResource("4_4v0wf")
+region = Rect2(0, 0, 80, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dtcwy"]
+atlas = ExtResource("4_4v0wf")
+region = Rect2(80, 0, 80, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gp6ah"]
+atlas = ExtResource("4_4v0wf")
+region = Rect2(160, 0, 80, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5r3c4"]
+atlas = ExtResource("4_4v0wf")
+region = Rect2(240, 0, 80, 76)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ntdtl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrd4y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dtcwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gp6ah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5r3c4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7f6j"]
 atlas = ExtResource("8_j443u")
@@ -245,13 +283,19 @@ repeat_times = 50
 texture = ExtResource("3_7wypm")
 centered = false
 
+[node name="Windmill" type="AnimatedSprite2D" parent="Node/Parallax2D7"]
+position = Vector2(50, 0)
+sprite_frames = SubResource("SpriteFrames_ntdtl")
+autoplay = "default"
+offset = Vector2(270, 39)
+
 [node name="Parallax2D3" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(0.55, 1)
 repeat_size = Vector2(608, 0)
 repeat_times = 50
 
 [node name="Background1" type="Sprite2D" parent="Node/Parallax2D3"]
-texture = ExtResource("4_miqit")
+texture = ExtResource("4_fss23")
 centered = false
 
 [node name="Parallax2D4" type="Parallax2D" parent="Node"]
@@ -259,7 +303,11 @@ scroll_scale = Vector2(0.7, 1)
 repeat_size = Vector2(303, 0)
 repeat_times = 100
 
-[node name="Fence" type="Sprite2D" parent="Node/Parallax2D4"]
+[node name="WheatEdge" type="Sprite2D" parent="Node/Parallax2D4"]
+texture = ExtResource("5_7wa5t")
+centered = false
+
+[node name="Fence" type="Sprite2D" parent="Node/Parallax2D4/WheatEdge"]
 texture = ExtResource("5_j607d")
 centered = false
 

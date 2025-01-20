@@ -28,25 +28,47 @@ public partial class AudioManager : Node
 
     private List<(string Text, float StartTime, float EndTime)> act2Subtitles = new List<(string, float, float)>
     {
-        ("Act 2, first line.", 0.0f, 2.0f),
-        ("Act 2, second line.", 2.0f, 4.0f),
-        ("Act 2, third line.", 4.0f, 6.0f),
+        ("Ik was goed in sporten, maar het was niet mijn passie.", 0.0f, 3.0f),
+        ("Iets wat mij ook altijd leuk leek was fotographie.", 3.0f, 6.0f),
+        ("Maar nadat ik het had geprobeerd was het toch niet echt iets voor mij.", 6.0f, 9.0f),
+        ("Daarna ben ik doorgegaan met een miluestudie.", 9.0f, 12.5f),
+        ("Daar heb ik heel erg veel van geleerd.", 12.5f, 15.0f),
+        ("Maar toen ik stage begon te lopen merkte ik dat dit werk", 15.0f, 17.5f),
+        ("eigelijk helemaal niks voor mij was.", 17.5f, 19.5f),
+        ("Het was wel heel erg interessant.", 19.5f, 22.5f),
+        ("Sterker nog ik heb de hele studie nog afgerond.", 22.5f, 25.0f),
+        ("En ook al vond ik de studie interessant, het werk was toch niet iets voor mij.", 25.0f, 30.5f),
         // Add more subtitles for Act 2
     };
 
     private List<(string Text, float StartTime, float EndTime)> act3Subtitles = new List<(string, float, float)>
     {
-        ("Act 3, first line.", 0.0f, 2.0f),
-        ("Act 3, second line.", 2.0f, 4.0f),
-        ("Act 3, third line.", 4.0f, 6.0f),
+        ("Ik begon na te denken, wat vond ik leuk om te doen?", 0.0f, 4.0f),
+        ("Ik vind het leuk om te tekenen om glas en lood te maken", 4.0f, 8.5f),
+        ("en om met mijn handen bezig te zijn.", 8.5f, 10.5f),
+        ("Ik begon te doen wat ik leuk vond en niet wat ik had gestudeerd", 10.5f, 15.0f),
+        ("Ik had een paar projectjes hier en daar gemaakt maar.", 15.0f, 18.0f),
+        ("mijn grootste project was toen ik een deur compleet had na gemaakt in glas en lood.", 18.0f, 23.0f),
+        ("Ik heb daarna geprobeerd om bij een paar bedrijven te gaan werken.", 23.0f, 28.0f),
+        ("Maar dat ging niet goed en ik ben na een jaar weer weggegaan.", 28.0f, 30.5f),
+        ("Dat is daarna ook nog wel een paar keer vaker gebeurt.", 30.5f, 33.5f),
         // Add more subtitles for Act 3
     };
 
     private List<(string Text, float StartTime, float EndTime)> act4Subtitles = new List<(string, float, float)>
     {
-        ("Act 4, first line.", 0.0f, 2.0f),
-        ("Act 4, second line.", 2.0f, 4.0f),
-        ("Act 4, third line.", 4.0f, 6.0f),
+        ("Ik had veels te veel geleerd dus ik wou doorgaan met glas en lood.", 0.0f, 4.0f),
+        ("Dus toen ben ik maar voor mij zelf begonnen.", 4.0f, 6.5f),
+        ("2 jaar later had ik al mijn eigen atelier waar ik nog steeds werk.", 6.5f, 10f),
+        ("Ik maak nu al meer dan 20 jaar glas en lood voor mensen.", 10f, 14f),
+        ("En ik geef een curses hoe jezelf ook glas en lood kan maken.", 14f, 17.50f),
+        ("Als ik terug denk heb ik nergens spijt van.", 17.5f, 22f),
+        ("Je moet gewoon zoveel mogelijk dingen uitproberen.", 22f, 24f),
+        ("En ook al heb je een diploma kan jij nog steed een andere richting op gaan", 24f, 28f),
+        ("en doen wat je echt wilt.", 28f, 30f),
+        ("A hier is mijn halte alweer.", 31f, 32.5f),
+        ("Het was fijn om met je te praten.", 32.5f, 35f),
+        ("En onthou je moet doen waarbij jij je goed voelt.", 35f, 38.5f),
         // Add more subtitles for Act 4
     };
 

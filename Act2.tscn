@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bmut16s4elljr"]
+[gd_scene load_steps=38 format=3 uid="uid://d2vjg8vl8ooot"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_nk2fv"]
 [ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_8uj2x"]
@@ -12,50 +12,50 @@
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="10_7rki7"]
 [ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="11_sts5q"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7f6j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_20nvj"]
 atlas = ExtResource("8_jlhm7")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t4qq0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_j222o"]
 atlas = ExtResource("8_jlhm7")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oejan"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_25q3a"]
 atlas = ExtResource("8_jlhm7")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8lm0j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_71viv"]
 atlas = ExtResource("8_jlhm7")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gaje3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uppbl"]
 atlas = ExtResource("8_jlhm7")
 region = Rect2(64, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_630tn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx46c"]
 atlas = ExtResource("8_jlhm7")
 region = Rect2(80, 0, 16, 16)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_epsou"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ym0on"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n7f6j")
+"texture": SubResource("AtlasTexture_20nvj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_t4qq0")
+"texture": SubResource("AtlasTexture_j222o")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oejan")
+"texture": SubResource("AtlasTexture_25q3a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_8lm0j")
+"texture": SubResource("AtlasTexture_71viv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gaje3")
+"texture": SubResource("AtlasTexture_uppbl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_630tn")
+"texture": SubResource("AtlasTexture_dx46c")
 }],
 "loop": true,
 "name": &"BirdFlying",
@@ -273,7 +273,7 @@ centered = false
 
 [node name="Parallax2D5" type="Parallax2D" parent="Node"]
 scroll_scale = Vector2(1.3, 1)
-repeat_size = Vector2(306, 0)
+repeat_size = Vector2(1200, 0)
 repeat_times = 100
 
 [node name="Foreground" type="Sprite2D" parent="Node/Parallax2D5"]
@@ -290,7 +290,7 @@ repeat_times = 50
 
 [node name="Birds" type="AnimatedSprite2D" parent="Node/Parallax2D8"]
 z_index = 1
-sprite_frames = SubResource("SpriteFrames_epsou")
+sprite_frames = SubResource("SpriteFrames_ym0on")
 animation = &"BirdFlying"
 autoplay = "BirdFlying"
 centered = false
