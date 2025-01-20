@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="8_jlhm7"]
 [ext_resource type="Script" path="res://Act2.cs" id="9_1wu8u"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="10_7rki7"]
-[ext_resource type="PackedScene" path="res://scene_transition.tscn" id="11_sts5q"]
+[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="11_sts5q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_20nvj"]
 atlas = ExtResource("8_jlhm7")

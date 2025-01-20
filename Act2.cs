@@ -4,9 +4,9 @@ using System;
 public partial class Act2 : Camera2D
 {
 	float maxSpeed = 180; // The target speed the background reaches
-	float accelerationDuration = 1.5f; // Time it takes to reach max speed
+	float accelerationDuration = 3f; // Time it takes to reach max speed
 	float currentSpeed = 0.0f; // The speed that starts at 0 and increases
-	float MoveDuration = 5.0f; // Duration of the movement
+	float MoveDuration = 7f; // Duration of the movement
 	double elapsedTime = 0.0;
 	bool isMoving = true;
 	bool isWaiting = false;
