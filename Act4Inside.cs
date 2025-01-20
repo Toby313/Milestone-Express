@@ -71,9 +71,6 @@ public partial class Act4Inside : Node2D
         {
             GD.PrintErr("Failed to load the next scene.");
         }
-
-        AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
-        audioManager.StopInsideTrain();
     }
 }
 
