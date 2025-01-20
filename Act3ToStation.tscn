@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://oplmr1r2wq57"]
+[gd_scene load_steps=40 format=3 uid="uid://oplmr1r2wq57"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_5u6mh"]
 [ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_btkwi"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://Act3ToStation.cs" id="8_y7onb"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="9_n0nnh"]
 [ext_resource type="PackedScene" path="res://scene_transition.tscn" id="10_eh0j3"]
+[ext_resource type="Texture2D" uid="uid://wjl1cuwt0dem" path="res://Sprites/TrainStation.png" id="11_pify6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mrd4y"]
 atlas = ExtResource("4_3w7u8")
@@ -295,6 +296,11 @@ sprite_frames = SubResource("SpriteFrames_ufp5n")
 animation = &"BirdFlying"
 autoplay = "BirdFlying"
 centered = false
+
+[node name="TrainStation" type="Sprite2D" parent="."]
+position = Vector2(864, 76)
+texture = ExtResource("11_pify6")
+offset = Vector2(-140, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 68.5)
