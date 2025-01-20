@@ -4,11 +4,16 @@ using System;
 public partial class Player : CharacterBody2D
 {
 	public const float Speed = 150.0f;
-	public const float JumpVelocity = -200.0f;
+	public const float JumpVelocity = -230.0f;
 
 	// Define the min and max X position boundaries.
-	public const float MinX = -1000f; // Minimum X position
-	public const float MaxX = 1000f;  // Maximum X position
+	public const float MinX = -145f; // Minimum X position
+	public const float MaxX = 145f;  // Maximum X position
+	
+	public override void _Ready()
+{
+	SetMeta("tag", "Player");
+}
 
 	public override void _PhysicsProcess(double delta)
 	{

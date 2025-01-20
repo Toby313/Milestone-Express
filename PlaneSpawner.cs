@@ -6,19 +6,26 @@ public partial class PlaneSpawner : Node2D
 	[Export] private PackedScene PlaneScene;
 	[Export] private float SpawnInterval = 5.0f;
 	[Export] private Vector2 SpawnPosition = new Vector2(-165, 0);
-	[Export] private float MinY = -60;
-	[Export] private float MaxY = -40f;
+	private float MinY = -55f;
+	private float MaxY = -40f;
 	[Export] private float TargetX = 165.0f;
-	[Export] private Label InfoLabel;
-	[Export] private float StartDelay = 3.0f; 
+	[Export] private Label InfoLabel; 
+	[Export] private float StartDelay = 5.5f; 
+	[Export] private Label EndLabel;
+	[Export] private float gameDuration = 30.0f;
+	[Export] private Label gameOverLabel;
+
 
 	private Timer spawnTimer;
 	private Timer startTimer;
+	private Timer gameTimer;
 
 	public override void _Ready()
 	{
 		// Initialize the label and make it visible
 		InfoLabel.Visible = true;
+		EndLabel.Visible = false;
+		gameOverLabel.Visible = false;
 
 		// Create and set up the start timer
 		startTimer = new Timer();
@@ -27,6 +34,13 @@ public partial class PlaneSpawner : Node2D
 		startTimer.Connect("timeout", Callable.From(OnStartTimerTimeout));
 		AddChild(startTimer);
 		startTimer.Start();
+
+		gameTimer = new Timer();
+		gameTimer.WaitTime = gameDuration;
+		gameTimer.OneShot = true;
+		gameTimer.Connect("timeout", Callable.From(OnGameTimerTimeout));
+		AddChild(gameTimer);
+		gameTimer.Start();
 	}
 
 	private void OnStartTimerTimeout()
@@ -46,21 +60,40 @@ public partial class PlaneSpawner : Node2D
 	{
 		SpawnPlane();
 	}
+	
+	private void OnGameTimerTimeout()
+	{
+		StopSpawning();
+		EndLabel.Visible = true;
+		RestartGameWithDelay(5.0f); 
+	}
+	
+	private async void RestartGameWithDelay(float delay)
+	{
+		GD.Print("Restarting game with delay...");
+		await ToSignal(GetTree().CreateTimer(delay), "timeout");
+   	 	GetTree().ReloadCurrentScene();
+	}
+	
 
 	private void SpawnPlane()
 	{
-		// Create a new instance of the plane
 		var plane = (Node2D)PlaneScene.Instantiate();
 		
-		// Set a random Y position for the spawn
 		float randomY = (float)GD.RandRange(MinY, MaxY);
 		plane.Position = new Vector2(SpawnPosition.X, randomY);
 		
-		// Add the plane to the scene
 		AddChild(plane);
 
-		// Move the plane towards the target X position
 		var planeScript = plane as Plane;
 		planeScript.Initialize(TargetX);
+	}
+	
+	private void StopSpawning()
+	{
+		if (spawnTimer != null)
+	{
+		spawnTimer.Stop();
+	}
 	}
 }

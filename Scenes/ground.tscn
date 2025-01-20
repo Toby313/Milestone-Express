@@ -3,12 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://frfgrgy0t0xn" path="res://Sprites/Alex_sprites/Assets/ground.png" id="1_goh2u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nsvuq"]
-size = Vector2(291, 22)
+size = Vector2(291, 17)
 
 [node name="Ground" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 1)
+position = Vector2(0.5, 3.5)
 shape = SubResource("RectangleShape2D_nsvuq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

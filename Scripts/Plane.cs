@@ -4,8 +4,10 @@ using System;
 public partial class Plane : Node2D
 {
 	[Export] private float Speed = 80.0f;
-	[Export] private PackedScene CloudScene; // Ensure this is a PackedScene
-	[Export] private float CloudSpawnInterval = 1.0f; // Time between cloud spawns
+	[Export] private PackedScene CloudScene;
+	[Export] private float CloudSpawnInterval = 0.7f;
+	[Export] private float MinXPosition = -145f; 
+	[Export] private float MaxXPosition = 145.0f; 
 
 	private float timeSinceLastCloud = 0.0f;
 	private float targetX;
@@ -30,7 +32,11 @@ public partial class Plane : Node2D
 		timeSinceLastCloud += (float)delta;
 		if (timeSinceLastCloud >= CloudSpawnInterval)
 		{
-			SpawnCloud();
+			// Check if the plane is within the X spawn range
+			if (Position.X >= MinXPosition && Position.X <= MaxXPosition)
+			{
+				SpawnCloud();
+			}
 			timeSinceLastCloud = 0.0f;
 		}
 	}

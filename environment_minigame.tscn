@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d0sumox5dpfh2"]
+[gd_scene load_steps=10 format=3 uid="uid://d0sumox5dpfh2"]
 
 [ext_resource type="Script" path="res://Scripts/Player.cs" id="1_2e7f1"]
 [ext_resource type="Texture2D" uid="uid://b67f6kvreia4b" path="res://Sprites/Alex_sprites/Assets/sky.png" id="1_8eryg"]
@@ -7,15 +7,17 @@
 [ext_resource type="PackedScene" uid="uid://c4gmqj31xfhty" path="res://Scenes/plane.tscn" id="6_n6eur"]
 [ext_resource type="FontFile" uid="uid://d23q8upyip0i" path="res://Sprites/Alex_sprites/Assets/Fonts/PixelOperator8.ttf" id="7_4brxe"]
 [ext_resource type="PackedScene" uid="uid://bsosjv1eet1ws" path="res://Scenes/ground.tscn" id="7_86o1q"]
+[ext_resource type="PackedScene" uid="uid://dkbrar0u0nscb" path="res://Scenes/game_over.tscn" id="8_em5in"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ahlub"]
-radius = 6.0
+radius = 7.07107
 
 [node name="Environment_minigame" type="Node2D"]
 
 [node name="Player" type="CharacterBody2D" parent="."]
 position = Vector2(0, 16)
-collision_layer = 2
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_2e7f1")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
@@ -36,16 +38,18 @@ position = Vector2(0.500009, 0.499999)
 scale = Vector2(1.05862, 0.817647)
 texture = ExtResource("1_8eryg")
 
-[node name="Plane_spawner" type="Node2D" parent="." node_paths=PackedStringArray("InfoLabel")]
+[node name="Plane_spawner" type="Node2D" parent="." node_paths=PackedStringArray("InfoLabel", "EndLabel", "gameOverLabel")]
 script = ExtResource("5_eovfk")
 PlaneScene = ExtResource("6_n6eur")
 InfoLabel = NodePath("Label")
+EndLabel = NodePath("../EndLabel")
+gameOverLabel = NodePath("../GameOver")
 
 [node name="Label" type="Label" parent="Plane_spawner"]
-offset_left = -117.0
-offset_top = -26.0
-offset_right = 124.0
-offset_bottom = 15.0
+offset_left = -118.0
+offset_top = -30.0
+offset_right = 123.0
+offset_bottom = 11.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_4brxe")
 theme_override_font_sizes/font_size = 8
@@ -57,6 +61,31 @@ horizontal_alignment = 1
 
 [node name="StartTimer" type="Timer" parent="Plane_spawner"]
 
-[node name="Ground" parent="." instance=ExtResource("7_86o1q")]
-position = Vector2(2, 49)
+[node name="GameTimer" type="Timer" parent="Plane_spawner"]
+wait_time = 10.856
+autostart = true
+
+[node name="Ground" parent="." groups=["Ground"] instance=ExtResource("7_86o1q")]
+z_index = 1
+position = Vector2(1, 60)
 scale = Vector2(1.07852, 1)
+
+[node name="EndLabel" type="Label" parent="."]
+offset_left = -56.0
+offset_top = -15.0
+offset_right = 70.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_4brxe")
+theme_override_font_sizes/font_size = 16
+text = "Well done!"
+
+[node name="GameOver" parent="." groups=["UI"] instance=ExtResource("8_em5in")]
+offset_left = -59.0
+offset_top = -15.0
+offset_right = 57.0
+offset_bottom = 8.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_4brxe")
+theme_override_font_sizes/font_size = 16
+text = "Try again!"
