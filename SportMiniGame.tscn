@@ -189,7 +189,7 @@ a = Vector2(-5.33333, -1.33334)
 b = Vector2(5.33333, 3.33334)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_swl8w"]
-friction = 0.0
+friction = 5.0
 bounce = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u1nom"]
@@ -199,7 +199,7 @@ radius = 4.0
 radius = 5.09902
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t6dc7"]
-friction = 0.0
+friction = 5.0
 bounce = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1gdgm"]
@@ -212,7 +212,7 @@ radius = 4.47214
 size = Vector2(20, 40)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cknw7"]
-friction = 0.0
+friction = 5.0
 bounce = 10.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pk0c1"]
