@@ -50,10 +50,10 @@ texture = ExtResource("2_ibldn")
 
 [node name="ButtonRed" type="Button" parent="."]
 z_index = 1
-offset_left = 92.0
-offset_top = 82.0
-offset_right = 214.0
-offset_bottom = 163.0
+offset_left = 110.0
+offset_top = 39.0
+offset_right = 232.0
+offset_bottom = 120.0
 flat = true
 
 [node name="Woody" type="Sprite2D" parent="ButtonRed"]
@@ -62,10 +62,10 @@ scale = Vector2(0.5145, 0.325333)
 texture = ExtResource("3_vfm4r")
 
 [node name="ButtonGreen" type="Button" parent="."]
-offset_left = 220.0
-offset_top = 156.0
-offset_right = 346.0
-offset_bottom = 234.0
+offset_left = 175.0
+offset_top = 137.0
+offset_right = 301.0
+offset_bottom = 215.0
 flat = true
 
 [node name="Silver" type="Sprite2D" parent="ButtonGreen"]
@@ -74,10 +74,10 @@ scale = Vector2(0.498, 0.309667)
 texture = ExtResource("4_168a5")
 
 [node name="ButtonBlue" type="Button" parent="."]
-offset_left = 37.0
-offset_top = 190.0
-offset_right = 161.0
-offset_bottom = 266.0
+offset_left = 46.0
+offset_top = 229.0
+offset_right = 170.0
+offset_bottom = 305.0
 flat = true
 
 [node name="Blue" type="Sprite2D" parent="ButtonBlue"]
@@ -86,10 +86,10 @@ scale = Vector2(0.47825, 0.288083)
 texture = ExtResource("5_q2mh5")
 
 [node name="ButtonYellow" type="Button" parent="."]
-offset_left = 199.0
-offset_top = 261.0
-offset_right = 328.0
-offset_bottom = 342.0
+offset_left = 191.0
+offset_top = 298.0
+offset_right = 320.0
+offset_bottom = 379.0
 flat = true
 
 [node name="Yellow" type="Sprite2D" parent="ButtonYellow"]
@@ -98,10 +98,10 @@ scale = Vector2(0.544, 0.32125)
 texture = ExtResource("6_lwnt3")
 
 [node name="ButtonMagenta" type="Button" parent="."]
-offset_left = 68.0
-offset_top = 340.0
-offset_right = 195.0
-offset_bottom = 420.0
+offset_left = 82.0
+offset_top = 404.0
+offset_right = 209.0
+offset_bottom = 484.0
 flat = true
 
 [node name="Brown" type="Sprite2D" parent="ButtonMagenta"]

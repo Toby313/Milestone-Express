@@ -95,6 +95,13 @@ public partial class StainedLevel2 : Node2D
             Number3.Visible = false;
         }
 
+        if (_currentIndex == 0)
+        {
+            Number1.Visible = true;
+            Number2.Visible = true;
+            Number3.Visible = true;
+        }
+
         if (_currentIndex >= _sprites.Length)
         {
             if (CheckColorCombination())
@@ -119,6 +126,9 @@ public partial class StainedLevel2 : Node2D
                 foreach (var sprite in _sprites)
                 {
                     sprite.Modulate = new Color(1, 1, 1); // Reset to white
+                    Number1.Visible = true;
+                    Number2.Visible = true;
+                    Number3.Visible = true;
                 }
                 _currentIndex = 0;
             }

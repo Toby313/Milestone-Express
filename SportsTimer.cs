@@ -3,7 +3,7 @@ using System;
 
 public partial class SportsTimer : Node2D
 {
-    [Export] public float TimerDuration = 30f; // Duration of the timer in seconds
+    [Export] public float TimerDuration = 40f; // Duration of the timer in seconds
     [Export] public string NextScenePath = "res://Act2.tscn"; // Path to the next scene
 
     private Timer _timer;

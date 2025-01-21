@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b081ifihp862n"]
+[gd_scene load_steps=18 format=3 uid="uid://b081ifihp862n"]
 
-[ext_resource type="PackedScene" path="res://scene_transition.tscn" id="1_1sruo"]
+[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="1_1sruo"]
 [ext_resource type="Script" path="res://Act3Inside.cs" id="1_acvat"]
 [ext_resource type="Texture2D" uid="uid://cjhd24da1p21p" path="res://Sprites/TrainInterior-Sheet.png" id="3_kk8vp"]
+[ext_resource type="Texture2D" uid="uid://dhdak6nsv5g5o" path="res://Sprites/TrainInterior-Sheet3.png" id="4_ygnrl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_45c18"]
 atlas = ExtResource("3_kk8vp")
@@ -26,6 +27,30 @@ region = Rect2(612, 0, 153, 69)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8260"]
 atlas = ExtResource("3_kk8vp")
+region = Rect2(765, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k2e3i"]
+atlas = ExtResource("4_ygnrl")
+region = Rect2(0, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sp6yy"]
+atlas = ExtResource("4_ygnrl")
+region = Rect2(153, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsjeu"]
+atlas = ExtResource("4_ygnrl")
+region = Rect2(306, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r8sr"]
+atlas = ExtResource("4_ygnrl")
+region = Rect2(459, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ep72o"]
+atlas = ExtResource("4_ygnrl")
+region = Rect2(612, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fx2tu"]
+atlas = ExtResource("4_ygnrl")
 region = Rect2(765, 0, 153, 69)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_srcc8"]
@@ -52,6 +77,29 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k2e3i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sp6yy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsjeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r8sr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ep72o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fx2tu")
+}],
+"loop": true,
+"name": &"sheepentrance",
+"speed": 5.0
 }]
 
 [node name="Act3Inside" type="Node2D"]
@@ -64,4 +112,5 @@ zoom = Vector2(8, 8)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_srcc8")
-autoplay = "default"
+animation = &"sheepentrance"
+autoplay = "sheepentrance"

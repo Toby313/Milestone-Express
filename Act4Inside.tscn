@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://bmixhrnd4s16o"]
 
 [ext_resource type="Script" path="res://Act4Inside.cs" id="1_iixlw"]
-[ext_resource type="PackedScene" path="res://scene_transition.tscn" id="1_j5wjt"]
+[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="1_j5wjt"]
 [ext_resource type="Texture2D" uid="uid://cjhd24da1p21p" path="res://Sprites/TrainInterior-Sheet.png" id="3_t565o"]
 [ext_resource type="Texture2D" uid="uid://vxwwewdamm4k" path="res://Sprites/TrainInterior-Sheet2.png" id="4_yx3v7"]
 

@@ -16,7 +16,7 @@ public partial class StainedLevel3 : Node2D
     private Color[] _correctCombination = new Color[]
     {
         new Color(0.4f, 0.2f, 0.1f), // Brown
-        new Color(0.8f, 0.5f, 0.3f), // LightBrown
+        new Color(0.4f, 0.6f, 1f), // LightBrown
         new Color(1f, 0.84f, 0f)  // Gold
     };
 
@@ -48,7 +48,7 @@ public partial class StainedLevel3 : Node2D
         _button1.Pressed += () => ChangeColor(new Color(1f, 0.84f, 0f)); // Gold
         _button2.Pressed += () => ChangeColor(new Color(0f, 1, 0f)); // Green
         _button3.Pressed += () => ChangeColor(new Color(0.4f, 0.6f, 1)); // Blue
-        _button4.Pressed += () => ChangeColor(new Color(0.8f, 0.5f, 0.3f)); // LightBrown
+        _button4.Pressed += () => ChangeColor(new Color(1f, 0f, 0f)); // LightBrown
         _button5.Pressed += () => ChangeColor(new Color(0.4f, 0.2f, 0.1f)); // Brown
 
         // Connect the Confirm button to switch to the next Sprite2D
@@ -95,6 +95,13 @@ public partial class StainedLevel3 : Node2D
             Number3.Visible = false;
         }
 
+        if (_currentIndex == 0)
+        {
+            Number1.Visible = true;
+            Number2.Visible = true;
+            Number3.Visible = true;
+        }
+
         if (_currentIndex >= _sprites.Length)
         {
             if (CheckColorCombination())
@@ -119,6 +126,9 @@ public partial class StainedLevel3 : Node2D
                 foreach (var sprite in _sprites)
                 {
                     sprite.Modulate = new Color(1, 1, 1); // Reset to white
+                    Number1.Visible = true;
+                    Number2.Visible = true;
+                    Number3.Visible = true;
                 }
                 _currentIndex = 0;
             }

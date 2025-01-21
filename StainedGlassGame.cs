@@ -106,6 +106,13 @@ public partial class StainedGlassGame : Node2D
             Number3.Visible = false;
         }
 
+        if (_currentIndex == 0)
+        {
+            Number1.Visible = true;
+            Number2.Visible = true;
+            Number3.Visible = true;
+        }
+
 		if (Fix2D != null && _currentIndex == 2)
 		{
 			Fix2D.Visible = false;  // Hide the sprite
@@ -140,6 +147,9 @@ public partial class StainedGlassGame : Node2D
                 {
                     sprite.Modulate = new Color(1, 1, 1); // Reset to white
 					Fix2D.Visible = true;
+                    Number1.Visible = true;
+                    Number2.Visible = true;
+                    Number3.Visible = true;
                 }
                 _currentIndex = 0;
             }

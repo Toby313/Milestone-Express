@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://vec38w35lhjl" path="res://DetailedGold.png" id="6_8ol0a"]
 [ext_resource type="Texture2D" uid="uid://bcxdatipfkuyh" path="res://DetailedGreen.png" id="7_miy3w"]
 [ext_resource type="Texture2D" uid="uid://cwf1pv6fw7g6x" path="res://DetailedBlue.png" id="8_i1k1o"]
-[ext_resource type="Texture2D" uid="uid://jn6ddyh1c5sw" path="res://DetailedLightBrown.png" id="9_doru4"]
 [ext_resource type="Texture2D" uid="uid://bu7dofi5fx5cs" path="res://DetailedBrown.png" id="10_mfw5r"]
+[ext_resource type="Texture2D" uid="uid://bfngv6hn7xdef" path="res://DetailedRed.png" id="10_pmr1r"]
 [ext_resource type="Texture2D" uid="uid://b8el6bqb71v8g" path="res://Raw Sprites/TableBackground.png" id="12_7jrxy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yidwy"]
@@ -71,10 +71,10 @@ texture = ExtResource("5_nk43x")
 
 [node name="ButtonRed" type="Button" parent="."]
 z_index = 1
-offset_left = 92.0
-offset_top = 82.0
-offset_right = 214.0
-offset_bottom = 163.0
+offset_left = 104.0
+offset_top = 47.0
+offset_right = 226.0
+offset_bottom = 128.0
 flat = true
 
 [node name="Red" type="Sprite2D" parent="ButtonRed"]
@@ -83,10 +83,10 @@ scale = Vector2(0.563917, 0.352667)
 texture = ExtResource("6_8ol0a")
 
 [node name="ButtonGreen" type="Button" parent="."]
-offset_left = 220.0
-offset_top = 156.0
-offset_right = 346.0
-offset_bottom = 234.0
+offset_left = 156.0
+offset_top = 137.0
+offset_right = 282.0
+offset_bottom = 215.0
 flat = true
 
 [node name="Green" type="Sprite2D" parent="ButtonGreen"]
@@ -95,10 +95,10 @@ scale = Vector2(0.515667, 0.334833)
 texture = ExtResource("7_miy3w")
 
 [node name="ButtonBlue" type="Button" parent="."]
-offset_left = 37.0
-offset_top = 190.0
-offset_right = 161.0
-offset_bottom = 266.0
+offset_left = 22.0
+offset_top = 221.0
+offset_right = 146.0
+offset_bottom = 297.0
 flat = true
 
 [node name="Blue" type="Sprite2D" parent="ButtonBlue"]
@@ -107,22 +107,22 @@ scale = Vector2(0.47825, 0.288083)
 texture = ExtResource("8_i1k1o")
 
 [node name="ButtonYellow" type="Button" parent="."]
-offset_left = 199.0
-offset_top = 261.0
-offset_right = 328.0
-offset_bottom = 342.0
+offset_left = 195.0
+offset_top = 289.0
+offset_right = 324.0
+offset_bottom = 370.0
 flat = true
 
 [node name="Yellow" type="Sprite2D" parent="ButtonYellow"]
-position = Vector2(73, 32)
-scale = Vector2(0.544, 0.32125)
-texture = ExtResource("9_doru4")
+position = Vector2(65.2, 11.5937)
+scale = Vector2(0.492, 0.457292)
+texture = ExtResource("10_pmr1r")
 
 [node name="ButtonMagenta" type="Button" parent="."]
-offset_left = 68.0
-offset_top = 340.0
-offset_right = 195.0
-offset_bottom = 420.0
+offset_left = 49.0
+offset_top = 383.0
+offset_right = 176.0
+offset_bottom = 463.0
 flat = true
 
 [node name="Brown" type="Sprite2D" parent="ButtonMagenta"]
@@ -145,7 +145,7 @@ offset_left = 500.0
 offset_top = 264.0
 offset_right = 595.0
 offset_bottom = 326.0
-text = "4"
+text = "3"
 label_settings = SubResource("LabelSettings_48a4h")
 horizontal_alignment = 1
 vertical_alignment = 1

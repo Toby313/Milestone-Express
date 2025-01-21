@@ -53,7 +53,7 @@ offset_bottom = 11.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_4brxe")
 theme_override_font_sizes/font_size = 8
-text = "Bescherm het miliue!
+text = "Bescherm het milieu!
 
 Laat het afval niet de gond raken
 "
@@ -71,9 +71,9 @@ position = Vector2(1, 60)
 scale = Vector2(1.07852, 1)
 
 [node name="EndLabel" type="Label" parent="."]
-offset_left = -56.0
+offset_left = -70.0
 offset_top = -15.0
-offset_right = 70.0
+offset_right = 88.0
 offset_bottom = 8.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_4brxe")
@@ -81,9 +81,9 @@ theme_override_font_sizes/font_size = 16
 text = "Goed gedaan!"
 
 [node name="GameOver" parent="." groups=["UI"] instance=ExtResource("8_em5in")]
-offset_left = -102.0
+offset_left = -101.0
 offset_top = -12.0
-offset_right = 116.0
+offset_right = 117.0
 offset_bottom = 11.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_4brxe")

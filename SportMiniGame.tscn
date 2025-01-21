@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://co1qgnh8kmn28" path="res://Everything for Sports Game/Lacrosse ball.png" id="9_t1jqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01r5f"]
-size = Vector2(29, 14)
+size = Vector2(29, 29)
 
 [sub_resource type="Animation" id="Animation_88maf"]
 resource_name = "Idle"
@@ -168,11 +168,11 @@ size = Vector2(101, 494)
 size = Vector2(1262.25, 89)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tr8h"]
-size = Vector2(10, 106)
+size = Vector2(15, 141)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q6f1a"]
-radius = 13.0
-height = 26.0
+radius = 25.0
+height = 50.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4u6vv"]
 radius = 11.0
@@ -210,7 +210,7 @@ radius = 4.0
 radius = 4.47214
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xe5xc"]
-size = Vector2(20, 40)
+size = Vector2(99, 201.5)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cknw7"]
 friction = 5.0
@@ -240,7 +240,7 @@ script = ExtResource("2_pp0uw")
 animation_tree = NodePath("AnimationTree")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Main Character"]
-position = Vector2(614.5, 326)
+position = Vector2(614.5, 318.5)
 shape = SubResource("RectangleShape2D_01r5f")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Main Character"]
@@ -287,23 +287,24 @@ position = Vector2(651.125, -117)
 shape = SubResource("RectangleShape2D_d17om")
 
 [node name="KorfBallGoal" type="CharacterBody2D" parent="."]
-position = Vector2(180, 251)
+position = Vector2(177, 334)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KorfBallGoal"]
-position = Vector2(-101, -58)
+position = Vector2(-95.5, -73.5)
 shape = SubResource("RectangleShape2D_8tr8h")
 
 [node name="Sprite2D" type="Sprite2D" parent="KorfBallGoal"]
 texture_filter = 1
-position = Vector2(-90, -69)
-scale = Vector2(2, 2)
+position = Vector2(-75.5, -89)
+scale = Vector2(3.09375, 2.6875)
 texture = ExtResource("4_euwer")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="KorfBallGoal"]
-position = Vector2(-85, -113)
+position = Vector2(-70, -150)
 shape = SubResource("CapsuleShape2D_q6f1a")
 
 [node name="LacroseStick" type="CharacterBody2D" parent="."]
+visible = false
 position = Vector2(89, 339)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LacroseStick"]
@@ -319,6 +320,7 @@ texture = ExtResource("5_aaifw")
 shape = SubResource("SegmentShape2D_3kpef")
 
 [node name="HockeyStick" type="CharacterBody2D" parent="."]
+visible = false
 position = Vector2(117, 318)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HockeyStick"]
@@ -337,27 +339,33 @@ scale = Vector2(1.5, 1.5)
 shape = SubResource("SegmentShape2D_q0w0m")
 
 [node name="HockeyBall" type="RigidBody2D" parent="."]
+visible = false
 position = Vector2(328, 331)
 physics_material_override = SubResource("PhysicsMaterial_swl8w")
 gravity_scale = 0.1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HockeyBall"]
+visible = false
 position = Vector2(806, -71)
 shape = SubResource("CircleShape2D_u1nom")
 
 [node name="Sprite2D" type="Sprite2D" parent="HockeyBall"]
+visible = false
 texture_filter = 1
 position = Vector2(806, -71)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("8_gvjfx")
 
 [node name="Area2D" type="Area2D" parent="HockeyBall"]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HockeyBall/Area2D"]
+visible = false
 position = Vector2(806, -71)
 shape = SubResource("CircleShape2D_iien1")
 
 [node name="LacrosseBall" type="RigidBody2D" parent="."]
+visible = false
 position = Vector2(39, -15)
 physics_material_override = SubResource("PhysicsMaterial_t6dc7")
 gravity_scale = 0.1
@@ -378,16 +386,15 @@ texture = ExtResource("9_t1jqb")
 position = Vector2(874, 158)
 shape = SubResource("CircleShape2D_gm75v")
 
-[node name="WinArea" type="Area2D" parent="."]
-position = Vector2(56, -16)
+[node name="WinArea" type="Area2D" parent="." groups=["goal"]]
+position = Vector2(53, 67)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea"]
-position = Vector2(39, 184)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea" groups=["goal"]]
+position = Vector2(86.5, 199.25)
 shape = SubResource("RectangleShape2D_xe5xc")
-disabled = true
 
-[node name="KorfBall" type="RigidBody2D" parent="."]
-position = Vector2(51, 43)
+[node name="KorfBall" type="RigidBody2D" parent="." groups=["goal"]]
+position = Vector2(-652, -149)
 input_pickable = true
 physics_material_override = SubResource("PhysicsMaterial_cknw7")
 gravity_scale = 0.1
@@ -408,6 +415,6 @@ texture = ExtResource("7_wfgdu")
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KorfBall/Area2D"]
+[node name="CollideWin" type="CollisionShape2D" parent="KorfBall/Area2D"]
 position = Vector2(1034, 456)
 shape = SubResource("CircleShape2D_vtbui")
