@@ -1,13 +1,60 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbwb3iqclcde1"]
+[gd_scene load_steps=11 format=3 uid="uid://bbwb3iqclcde1"]
 
 [ext_resource type="Script" path="res://InsideTrain.cs" id="3_6kskg"]
+[ext_resource type="Texture2D" uid="uid://cjhd24da1p21p" path="res://Sprites/TrainInterior-Sheet.png" id="3_8bcdy"]
 [ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="4_0wdkc"]
 
-[node name="Inside" type="Node2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_45c18"]
+atlas = ExtResource("3_8bcdy")
+region = Rect2(0, 0, 153, 69)
 
-[node name="MiddleLayer" type="Sprite2D" parent="."]
-position = Vector2(610, 476)
-scale = Vector2(4, 1)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s5o5n"]
+atlas = ExtResource("3_8bcdy")
+region = Rect2(153, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7dfv"]
+atlas = ExtResource("3_8bcdy")
+region = Rect2(306, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fcc7"]
+atlas = ExtResource("3_8bcdy")
+region = Rect2(459, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pk2c"]
+atlas = ExtResource("3_8bcdy")
+region = Rect2(612, 0, 153, 69)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8260"]
+atlas = ExtResource("3_8bcdy")
+region = Rect2(765, 0, 153, 69)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4rtsy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45c18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s5o5n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7dfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fcc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5pk2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8260")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Inside" type="Node2D"]
 
 [node name="ArrivaAnimation-sheet" type="Sprite2D" parent="."]
 position = Vector2(8630, 109)
@@ -16,3 +63,11 @@ script = ExtResource("3_6kskg")
 
 [node name="Scene_Transition" parent="ArrivaAnimation-sheet" instance=ExtResource("4_0wdkc")]
 position = Vector2(-259.522, -473.939)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(8, 8)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4rtsy")
+autoplay = "default"
+frame_progress = 0.265722
