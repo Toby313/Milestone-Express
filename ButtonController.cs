@@ -22,6 +22,16 @@ public partial class ButtonController : Node2D
     private void OnRestartButtonPressed()
     {
         GD.Print("Restarting the game...");
-        GetTree().ReloadCurrentScene(); // Restarts the project by reloading the current scene
+        var nextScenePath = "res://mainscene.tscn"; // Path to the next scene
+		var nextScene = (PackedScene)ResourceLoader.Load(nextScenePath);
+		if (nextScene != null)
+		{
+			GetTree().ChangeSceneToPacked(nextScene); // Change to the next scene
+			GD.Print("Transitioned to the next scene.");
+		}
+		else
+		{
+			GD.PrintErr("Failed to load the next scene.");
+		}
     }
 }

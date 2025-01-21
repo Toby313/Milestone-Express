@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://r1prsyb2mdcy"]
+[gd_scene load_steps=16 format=3 uid="uid://r1prsyb2mdcy"]
 
 [ext_resource type="Script" path="res://StainedLevel2.cs" id="1_nqlwc"]
 [ext_resource type="Texture2D" uid="uid://bgrm5xh16p1jw" path="res://Tree_Trunk.png" id="3_plcbu"]
@@ -12,6 +12,18 @@
 [ext_resource type="Texture2D" uid="uid://bduumi3scpj05" path="res://DetailedYellow.png" id="10_knedg"]
 [ext_resource type="Texture2D" uid="uid://bu7dofi5fx5cs" path="res://DetailedBrown.png" id="11_36qpf"]
 [ext_resource type="Texture2D" uid="uid://b8el6bqb71v8g" path="res://Raw Sprites/TableBackground.png" id="13_hqnew"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_20lyl"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ln3ca"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_40dvc"]
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="StainedGlassLvl2" type="Node2D"]
 script = ExtResource("1_nqlwc")
@@ -114,3 +126,34 @@ flat = true
 position = Vector2(66, 33)
 scale = Vector2(0.503583, 0.34725)
 texture = ExtResource("11_36qpf")
+
+[node name="Number1" type="Label" parent="."]
+offset_left = 577.0
+offset_top = 334.0
+offset_right = 684.0
+offset_bottom = 404.0
+text = "5
+"
+label_settings = SubResource("LabelSettings_20lyl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number2" type="Label" parent="."]
+offset_left = 575.0
+offset_top = 204.0
+offset_right = 670.0
+offset_bottom = 266.0
+text = "2"
+label_settings = SubResource("LabelSettings_ln3ca")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number3" type="Label" parent="."]
+offset_left = 488.0
+offset_top = 274.0
+offset_right = 528.0
+offset_bottom = 309.0
+text = "3"
+label_settings = SubResource("LabelSettings_40dvc")
+horizontal_alignment = 1
+vertical_alignment = 1

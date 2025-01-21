@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://jeqqorvokjrg"]
+[gd_scene load_steps=18 format=3 uid="uid://jeqqorvokjrg"]
 
 [ext_resource type="Script" path="res://StainedGlassGame.cs" id="1_n8mi2"]
 [ext_resource type="Texture2D" uid="uid://r11ixjok3bbp" path="res://SpriteWood.png" id="2_doisn"]
@@ -14,6 +14,18 @@
 [ext_resource type="Texture2D" uid="uid://bu7dofi5fx5cs" path="res://DetailedBrown.png" id="7_jfncv"]
 [ext_resource type="Texture2D" uid="uid://b8el6bqb71v8g" path="res://Raw Sprites/TableBackground.png" id="13_6jx7t"]
 [ext_resource type="Texture2D" uid="uid://b37pw81v8ty14" path="res://Blue_Sky.png" id="14_jjf0g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x7ep2"]
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hvkv2"]
+font_size = 22
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_k473g"]
+font_size = 25
+font_color = Color(0, 0, 0, 1)
 
 [node name="StainedGlassMini" type="Node2D"]
 script = ExtResource("1_n8mi2")
@@ -151,3 +163,33 @@ offset_top = 349.0
 offset_right = 300.0
 offset_bottom = 410.0
 text = "Tevreden met jou kleur? Confirm"
+
+[node name="Number1" type="Label" parent="."]
+offset_left = 540.0
+offset_top = 354.0
+offset_right = 647.0
+offset_bottom = 424.0
+text = "2"
+label_settings = SubResource("LabelSettings_x7ep2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number2" type="Label" parent="."]
+offset_left = 575.0
+offset_top = 204.0
+offset_right = 670.0
+offset_bottom = 266.0
+text = "1"
+label_settings = SubResource("LabelSettings_hvkv2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Number3" type="Label" parent="."]
+offset_left = 617.0
+offset_top = 283.0
+offset_right = 657.0
+offset_bottom = 318.0
+text = "5"
+label_settings = SubResource("LabelSettings_k473g")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -15,6 +15,8 @@ public partial class PlaneSpawner : Node2D
 	[Export] private float gameDuration = 30.0f;
 	[Export] private Label gameOverLabel;
 
+	 [Export] public string NextScenePath = "res://Act3.tscn";
+
 
 	private Timer spawnTimer;
 	private Timer startTimer;
@@ -41,6 +43,9 @@ public partial class PlaneSpawner : Node2D
 		gameTimer.Connect("timeout", Callable.From(OnGameTimerTimeout));
 		AddChild(gameTimer);
 		gameTimer.Start();
+
+		AudioManager audioManager = (AudioManager)GetNode("/root/AudioManager");
+		audioManager.OnAudioFinished();
 	}
 
 	private void OnStartTimerTimeout()
@@ -72,7 +77,7 @@ public partial class PlaneSpawner : Node2D
 	{
 		GD.Print("Restarting game with delay...");
 		await ToSignal(GetTree().CreateTimer(delay), "timeout");
-   	 	GetTree().ReloadCurrentScene();
+   	 	GetTree().ChangeSceneToFile(NextScenePath); // Change to the next scene
 	}
 	
 

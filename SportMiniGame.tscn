@@ -119,34 +119,34 @@ _data = {
 "walking right": SubResource("Animation_c8o5r")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8pgsn"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bxcsu"]
 animation = &"Idle"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_eyst5"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_8pgsn")
+blend_point_0/node = SubResource("AnimationNodeAnimation_bxcsu")
 blend_point_0/pos = Vector2(0, 0)
 blend_mode = 1
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yc1jf"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_26imh"]
 animation = &"Walking down"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2dhha"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hb2ku"]
 animation = &"Walking up"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_24ba7"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vofpo"]
 animation = &"walking right"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_glaba"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_4l1oy"]
 animation = &"walking left"
 
 [sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_vabsk"]
-blend_point_0/node = SubResource("AnimationNodeAnimation_yc1jf")
+blend_point_0/node = SubResource("AnimationNodeAnimation_26imh")
 blend_point_0/pos = Vector2(0, 1)
-blend_point_1/node = SubResource("AnimationNodeAnimation_2dhha")
+blend_point_1/node = SubResource("AnimationNodeAnimation_hb2ku")
 blend_point_1/pos = Vector2(0, -1)
-blend_point_2/node = SubResource("AnimationNodeAnimation_24ba7")
+blend_point_2/node = SubResource("AnimationNodeAnimation_vofpo")
 blend_point_2/pos = Vector2(1, 0)
-blend_point_3/node = SubResource("AnimationNodeAnimation_glaba")
+blend_point_3/node = SubResource("AnimationNodeAnimation_4l1oy")
 blend_point_3/pos = Vector2(-1, 0)
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_bdvbj"]
@@ -197,7 +197,7 @@ bounce = 10.0
 radius = 4.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iien1"]
-radius = 5.09902
+radius = 9.0
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_t6dc7"]
 friction = 5.0
