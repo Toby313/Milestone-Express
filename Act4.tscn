@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://jg8dbyf0lp64"]
+[gd_scene load_steps=39 format=3 uid="uid://jg8dbyf0lp64"]
 
 [ext_resource type="Texture2D" uid="uid://byke381laua6r" path="res://Sprites/Background Layers/SkyLayer.png" id="1_okxxg"]
 [ext_resource type="Texture2D" uid="uid://d4ii5o6e0cr8i" path="res://Sprites/Background Layers/BackgroundLayer3.png" id="2_3hy48"]
@@ -9,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bgntjj0key2db" path="res://Sprites/Background Layers/ForegroundLayer.png" id="7_mslcg"]
 [ext_resource type="Texture2D" uid="uid://bgwxnqfl6fqbl" path="res://Sprites/Bird Animations/Bird-Sheet.png" id="8_bpqih"]
 [ext_resource type="Script" path="res://Act4.cs" id="9_j2kgb"]
+[ext_resource type="Texture2D" uid="uid://wjl1cuwt0dem" path="res://Sprites/TrainStation.png" id="9_j3v4w"]
 [ext_resource type="Texture2D" uid="uid://ci31so50rxvhh" path="res://Sprites/Train Animations/ArrivaAnimation-Sheet.png" id="10_s3j7r"]
-[ext_resource type="PackedScene" uid="uid://nhrfrxo1w472" path="res://scene_transition.tscn" id="11_iy4c6"]
+[ext_resource type="PackedScene" path="res://scene_transition.tscn" id="11_iy4c6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7f6j"]
 atlas = ExtResource("8_bpqih")
@@ -294,6 +295,10 @@ sprite_frames = SubResource("SpriteFrames_1q12q")
 animation = &"BirdFlying"
 autoplay = "BirdFlying"
 centered = false
+
+[node name="TrainStation" type="Sprite2D" parent="."]
+position = Vector2(-122, 76)
+texture = ExtResource("9_j3v4w")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, 68.5)
