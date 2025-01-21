@@ -132,7 +132,7 @@ public partial class Act2Move : Camera2D
 
     private void TransitionToNextScene()
     {
-        var nextScenePath = "res://EnvironmentMiniGame.tscn"; // Path to the next scene
+        var nextScenePath = "res://environment_minigame.tscn"; // Path to the next scene
         var nextScene = (PackedScene)ResourceLoader.Load(nextScenePath);
         if (nextScene != null)
         {

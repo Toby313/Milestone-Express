@@ -1,6 +1,7 @@
-[gd_scene load_steps=46 format=3 uid="uid://b10pi1qqwevhg"]
+[gd_scene load_steps=47 format=3 uid="uid://b10pi1qqwevhg"]
 
 [ext_resource type="Texture2D" uid="uid://c7wwu0j34ekde" path="res://Everything for Sports Game/Mini game gym.png" id="1_iud4e"]
+[ext_resource type="Script" path="res://SportsTimer.cs" id="1_qb8oy"]
 [ext_resource type="Script" path="res://main_character.gd" id="2_pp0uw"]
 [ext_resource type="Texture2D" uid="uid://dcwgks130qk77" path="res://Everything for Sports Game/main character cycle-Sheet-export.png" id="3_e1sgg"]
 [ext_resource type="Texture2D" uid="uid://cmge2ot8ecvvv" path="res://Everything for Sports Game/korfball goal-export.png" id="4_euwer"]
@@ -221,6 +222,7 @@ bounce = 10.0
 radius = 11.0
 
 [node name="SportMiniGame" type="Node2D"]
+script = ExtResource("1_qb8oy")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1

@@ -128,3 +128,26 @@ z_index = -6
 position = Vector2(3398, 802.5)
 scale = Vector2(43.5664, 27.8125)
 texture = ExtResource("13_6jx7t")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 813.0
+offset_top = 35.0
+offset_right = 1209.0
+offset_bottom = 65.0
+text = "Kies de goeie kleuren die bij de afbeelding passen"
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 27.0
+offset_right = 397.0
+offset_bottom = 137.0
+text = "Om het glas en lood te verven. "
+
+[node name="Label2" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 349.0
+offset_right = 300.0
+offset_bottom = 410.0
+text = "Tevreden met jou kleur? Confirm"

@@ -224,7 +224,7 @@ public partial class AudioManager : Node
         currentSubtitleIndex = -1;
     }
 
-    private void OnAudioFinished()
+    public void OnAudioFinished()
     {
         GD.Print("Audio finished. Clearing subtitles.");
         subtitleLabel.Text = ""; // Clear the subtitle text

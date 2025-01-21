@@ -92,8 +92,8 @@ public partial class PlaneSpawner : Node2D
 	private void StopSpawning()
 	{
 		if (spawnTimer != null)
-	{
-		spawnTimer.Stop();
-	}
+		{
+			spawnTimer.Stop();
+		}
 	}
 }

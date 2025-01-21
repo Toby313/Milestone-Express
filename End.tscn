@@ -26,8 +26,10 @@ scale = Vector2(4.27303, 4.97656)
 texture = ExtResource("1_p7pfo")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 1242.0
-offset_bottom = 549.0
+offset_left = -18.0
+offset_top = 16.0
+offset_right = 1224.0
+offset_bottom = 565.0
 text = "The End"
 label_settings = SubResource("LabelSettings_bdjnb")
 horizontal_alignment = 1
@@ -37,8 +39,10 @@ position = Vector2(656, 343)
 script = ExtResource("2_rnw7s")
 
 [node name="Stop" type="Button" parent="ButtonController"]
-offset_right = 274.0
-offset_bottom = 125.0
+offset_left = -6.0
+offset_top = -28.0
+offset_right = 268.0
+offset_bottom = 97.0
 flat = true
 
 [node name="Label" type="Label" parent="ButtonController/Stop"]
@@ -51,10 +55,10 @@ label_settings = SubResource("LabelSettings_lmnfq")
 horizontal_alignment = 1
 
 [node name="Restart" type="Button" parent="ButtonController"]
-offset_left = -331.0
-offset_top = 1.0
-offset_right = -57.0
-offset_bottom = 126.0
+offset_left = -337.0
+offset_top = -27.0
+offset_right = -63.0
+offset_bottom = 98.0
 flat = true
 
 [node name="Label" type="Label" parent="ButtonController/Restart"]

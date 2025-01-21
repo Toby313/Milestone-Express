@@ -74,7 +74,7 @@ public partial class StainedLevel3 : Node2D
             {
                 _confirmButton.Disabled = true;
                 GD.Print("You won! All Sprites are correctly colored.");
-                var nextScenePath = "res://AfterGlass.tscn";
+                var nextScenePath = "res://End.tscn";
                 var nextScene = (PackedScene)ResourceLoader.Load(nextScenePath);
                 if (nextScene != null)
                 {
